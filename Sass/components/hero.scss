@@ -1,5 +1,3 @@
-@import '../sass.scss';
-
 .hero-component {
   .background-wrapper {
     background-image: url('/images/hero-mobile.svg');
@@ -37,7 +35,7 @@
   @media (min-width: $desktop) {
     .background-wrapper {
       background-image: url('/images/hero-full.svg');
-      max-height: calc(100vh - 80px);
+      height: calc(100vh - 80px);
     }
     .lead {
       @include rem(font-size, 70px);

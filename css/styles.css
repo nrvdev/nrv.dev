@@ -2,7 +2,7 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
+.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3, .join-component h2 b {
   font-family: 'Huge'; }
 
 .link-button,
@@ -15,20 +15,7 @@ body {
 body {
   font-family: 'Roboto', sans-serif; }
 
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
+.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3, .join-component h2 b {
   font-family: 'Huge'; }
 
 .link-button,
@@ -43,19 +30,6 @@ body {
 
 .background-color-dark-coral {
   background-color: #FF4A54; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
 
 .tablet,
 .tablet-up,
@@ -89,111 +63,6 @@ body {
     .wrapper.events-news-wrapper .right {
       width: 70%; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-.wrapper {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.hidden, .search-component label {
-  visibility: hidden;
-  position: absolute; }
-
-.background-wrapper {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.standard-margins {
-  margin: 40px; }
-
-.standard-padding, section {
-  padding: 40px; }
-
-.link-button,
-.button {
-  font-size: 13px;
-  font-size: parse-int(13px)/16rem;
-  color: #FF4A54;
-  border: 1px solid #FF4A54;
-  background-color: rgba(255, 74, 84, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  height: 55px;
-  width: 225px;
-  font-weight: bold; }
-  .link-button:active, .link-button:hover, .link-button:focus,
-  .button:active,
-  .button:hover,
-  .button:focus {
-    padding: 0;
-    border: 1px solid #FF4A54; }
-
-.button-link {
-  outline: none;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-  .button-link:active, .button-link:hover, .button-link:focus {
-    color: #FF4A54;
-    padding-bottom: 6px;
-    border-bottom: 4px solid #FF4A54; }
-
-.subtle-hero {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh; }
-  .subtle-hero h1 {
-    visibility: hidden; }
-
-@media (min-width: 768px) {
-  .subtle-hero {
-    background-position: 20vw 120px;
-    background-repeat: no-repeat; }
-    .subtle-hero.devs {
-      background-image: url("/images/devs.svg"); }
-    .subtle-hero.groups {
-      background-image: url("/images/groups.svg"); } }
-
-@media (min-width: 1140px) {
-  .subtle-hero {
-    background-position: 18vw 150px; }
-  .standard-margins {
-    margin-left: calc((100vw - 1140px) / 2);
-    margin-right: calc((100vw - 1140px) / 2); }
-  .standard-padding, section {
-    padding-left: calc((100vw - 1140px) / 2);
-    padding-right: calc((100vw - 1140px) / 2); } }
-
 header,
 main,
 footer {
@@ -218,19 +87,6 @@ section.no-padding {
     padding-left: 0;
     padding-right: 0; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 .wrapper {
   height: 100%;
   display: flex;
@@ -310,35 +166,9 @@ body {
     padding-left: calc((100vw - 1140px) / 2);
     padding-right: calc((100vw - 1140px) / 2); } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 button {
   background-color: transparent;
   border: 0; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
 
 h1,
 h2,
@@ -414,7 +244,7 @@ img {
 body {
   font-family: 'Roboto', sans-serif; }
 
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
+.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3, .join-component h2 b {
   font-family: 'Huge'; }
 
 .link-button,
@@ -423,111 +253,6 @@ body {
 
 .hero-component .follow, .news-component .news-details {
   font-family: 'Sofia Pro'; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-.wrapper {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.hidden, .search-component label {
-  visibility: hidden;
-  position: absolute; }
-
-.background-wrapper {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.standard-margins {
-  margin: 40px; }
-
-.standard-padding, section {
-  padding: 40px; }
-
-.link-button,
-.button {
-  font-size: 13px;
-  font-size: parse-int(13px)/16rem;
-  color: #FF4A54;
-  border: 1px solid #FF4A54;
-  background-color: rgba(255, 74, 84, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  height: 55px;
-  width: 225px;
-  font-weight: bold; }
-  .link-button:active, .link-button:hover, .link-button:focus,
-  .button:active,
-  .button:hover,
-  .button:focus {
-    padding: 0;
-    border: 1px solid #FF4A54; }
-
-.button-link {
-  outline: none;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-  .button-link:active, .button-link:hover, .button-link:focus {
-    color: #FF4A54;
-    padding-bottom: 6px;
-    border-bottom: 4px solid #FF4A54; }
-
-.subtle-hero {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh; }
-  .subtle-hero h1 {
-    visibility: hidden; }
-
-@media (min-width: 768px) {
-  .subtle-hero {
-    background-position: 20vw 120px;
-    background-repeat: no-repeat; }
-    .subtle-hero.devs {
-      background-image: url("/images/devs.svg"); }
-    .subtle-hero.groups {
-      background-image: url("/images/groups.svg"); } }
-
-@media (min-width: 1140px) {
-  .subtle-hero {
-    background-position: 18vw 150px; }
-  .standard-margins {
-    margin-left: calc((100vw - 1140px) / 2);
-    margin-right: calc((100vw - 1140px) / 2); }
-  .standard-padding, section {
-    padding-left: calc((100vw - 1140px) / 2);
-    padding-right: calc((100vw - 1140px) / 2); } }
 
 .navigation-component {
   height: 100%;
@@ -548,8 +273,8 @@ body {
     height: 80px;
     width: 80px; }
   .navigation-component .join {
-    font-size: 12px;
-    font-size: parse-int(12px)/16rem; }
+    font-size: 14px;
+    font-size: parse-int(14px)/16rem; }
   @media (min-width: 768px) {
     .navigation-component .logo {
       width: 220px; } }
@@ -577,21 +302,8 @@ body {
         border: 0;
         padding-bottom: 0; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 .hero-component .background-wrapper {
-  background-image: url("/images/hero-mobile.jpg"); }
+  background-image: url("/images/hero-mobile.svg"); }
 
 .hero-component .logo-overlay {
   display: none; }
@@ -617,12 +329,14 @@ body {
     padding-top: 40px;
     text-align: center; }
   .hero-component .lead {
-    line-height: 40px; } }
+    font-size: 53px;
+    font-size: parse-int(53px)/16rem;
+    line-height: 60px; } }
 
 @media (min-width: 1140px) {
   .hero-component .background-wrapper {
-    background-image: url("/images/hero-full.jpg");
-    max-height: calc(100vh - 80px); }
+    background-image: url("/images/hero-full.svg");
+    height: calc(100vh - 80px); }
   .hero-component .lead {
     font-size: 70px;
     font-size: parse-int(70px)/16rem;
@@ -639,19 +353,6 @@ body {
     font-size: 20px;
     font-size: parse-int(20px)/16rem;
     line-height: 24px; } }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
 
 .events-component h2 {
   display: flex;
@@ -685,19 +386,6 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end; } }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
 
 .news-component p {
   color: #86939E; }
@@ -785,19 +473,6 @@ body {
         .news-component ul li .article-image-wrapper img {
           width: 100%; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 .activity-component .category-toggles {
   display: flex; }
   .activity-component .category-toggles li {
@@ -861,61 +536,50 @@ body {
           position: relative;
           right: 55px; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 .join-component {
   background-image: url("/images/river-right.svg");
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center; }
   .join-component h2 {
-    font-weight: normal;
+    font-size: 36px;
+    font-size: parse-int(36px)/16rem;
+    font-weight: 200;
     text-transform: uppercase;
     margin: 0;
     padding: 40px; }
+    .join-component h2 b {
+      letter-spacing: .05rem; }
+  .join-component p {
+    font-size: 16px;
+    font-size: parse-int(16px)/16rem;
+    line-height: 28px;
+    line-height: parse-int(28px)/16rem;
+    letter-spacing: 2px;
+    letter-spacing: parse-int(2px)/16rem;
+    color: #86939E; }
+  .join-component .logo {
+    width: 70%; }
   @media (min-width: 768px) {
     .join-component p {
+      width: 50%; }
+    .join-component .logo {
       width: 50%; } }
   @media (min-width: 1140px) {
     .join-component {
       background-image: url("/images/river-left.svg"), url("/images/river-right.svg");
       background-position: left bottom, right bottom;
-      margin-top: 50px; } }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
+      padding: 100px; }
+      .join-component .logo {
+        width: 33%; } }
 
 .footer-component {
   background-color: #252525;
-  background-image: url("/images/logo-full-large-grey.svg");
-  background-repeat: no-repeat;
-  background-position: center 80px;
-  background-size: contain;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center; }
@@ -935,8 +599,10 @@ body {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      background-position: left center;
-      background-size: 70vw;
+      background-image: url("/images/logo-full-large-grey.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 88vw;
       text-align: left;
       padding-top: 100px;
       padding-bottom: 100px; }
@@ -944,6 +610,7 @@ body {
         width: 70vw;
         display: flex;
         justify-content: flex-start;
+        margin-top: 100px;
         padding-bottom: 50px;
         flex-wrap: wrap; }
         .footer-component .site-map-wrapper .list-wrapper {
@@ -958,19 +625,6 @@ body {
           font-size: 16px;
           font-size: parse-int(16px)/16rem;
           color: #ffffff; } }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
 
 .filters-component {
   position: absolute;
@@ -1065,111 +719,6 @@ body {
     .filters-component {
       padding-top: 200px; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-.wrapper {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.hidden, .search-component label {
-  visibility: hidden;
-  position: absolute; }
-
-.background-wrapper {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.standard-margins {
-  margin: 40px; }
-
-.standard-padding, section {
-  padding: 40px; }
-
-.link-button,
-.button {
-  font-size: 13px;
-  font-size: parse-int(13px)/16rem;
-  color: #FF4A54;
-  border: 1px solid #FF4A54;
-  background-color: rgba(255, 74, 84, 0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  height: 55px;
-  width: 225px;
-  font-weight: bold; }
-  .link-button:active, .link-button:hover, .link-button:focus,
-  .button:active,
-  .button:hover,
-  .button:focus {
-    padding: 0;
-    border: 1px solid #FF4A54; }
-
-.button-link {
-  outline: none;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-  .button-link:active, .button-link:hover, .button-link:focus {
-    color: #FF4A54;
-    padding-bottom: 6px;
-    border-bottom: 4px solid #FF4A54; }
-
-.subtle-hero {
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh; }
-  .subtle-hero h1 {
-    visibility: hidden; }
-
-@media (min-width: 768px) {
-  .subtle-hero {
-    background-position: 20vw 120px;
-    background-repeat: no-repeat; }
-    .subtle-hero.devs {
-      background-image: url("/images/devs.svg"); }
-    .subtle-hero.groups {
-      background-image: url("/images/groups.svg"); } }
-
-@media (min-width: 1140px) {
-  .subtle-hero {
-    background-position: 18vw 150px; }
-  .standard-margins {
-    margin-left: calc((100vw - 1140px) / 2);
-    margin-right: calc((100vw - 1140px) / 2); }
-  .standard-padding, section {
-    padding-left: calc((100vw - 1140px) / 2);
-    padding-right: calc((100vw - 1140px) / 2); } }
-
 .searchable-list-component {
   top: 110px; }
   .searchable-list-component .searchable-list {
@@ -1208,19 +757,6 @@ body {
     .searchable-list-component .card-wrapper {
       width: calc((100% - 120px) / 3); } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 .dev-card-component {
   width: 100%; }
   .dev-card-component .dev-image-wrapper {
@@ -1253,20 +789,7 @@ body {
 body {
   font-family: 'Roboto', sans-serif; }
 
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
+.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3, .join-component h2 b {
   font-family: 'Huge'; }
 
 .link-button,
@@ -1385,19 +908,6 @@ body {
       font-size: 36px;
       font-size: parse-int(36px)/16rem; } }
 
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
-
 .skills-component {
   margin-top: 30px;
   display: flex;
@@ -1422,19 +932,6 @@ body {
       margin-right: 10px; }
       .skills-component.group li:nth-child(3n) {
         margin-right: 0; } }
-
-body {
-  font-family: 'Roboto', sans-serif; }
-
-.hero-component .lead, .events-component h2, .news-component .news-title, .news-component ul li h3 {
-  font-family: 'Huge'; }
-
-.link-button,
-.button, .navigation-component .join, .news-component .date, .skills-component li {
-  font-family: 'League Mono'; }
-
-.hero-component .follow, .news-component .news-details {
-  font-family: 'Sofia Pro'; }
 
 .group-card-component {
   width: 100%; }

@@ -2,10 +2,6 @@
 .button {
   font-family: 'League Mono'; }
 
-.link-button,
-.button {
-  font-family: 'League Mono'; }
-
 .wrapper {
   height: 100%;
   display: flex;

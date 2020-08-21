@@ -1,9 +1,8 @@
-@import '../sass.scss';
-
 .join-component {
   background-image: url('/images/river-right.svg');
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-color: $white;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -11,15 +10,35 @@
   text-align: center;
 
   h2 {
-    font-weight: normal;
+    @include rem(font-size, 36px);
+    font-weight: 200;
     text-transform: uppercase;
     margin: 0;
     padding: 40px;
+
+    b {
+      @extend %font-huge;
+      letter-spacing: .05rem;
+    }
   }
 
+  p {
+    @include rem(font-size, 16px);
+    @include rem(line-height, 28px);
+    @include rem(letter-spacing, 2px);
+    color: $text-medium-grey;
+  }
+
+  .logo {
+    width: 70%;
+  }
 
   @media (min-width: $tablet) {
     p {
+      width: 50%;
+    }
+
+    .logo {
       width: 50%;
     }
   }
@@ -27,6 +46,10 @@
   @media (min-width: $desktop) {
     background-image: url('/images/river-left.svg'), url('/images/river-right.svg');
     background-position: left bottom, right bottom;
-    margin-top: 50px;
+    padding: 100px;
+
+    .logo {
+      width: 33%;
+    }
   }
 }
