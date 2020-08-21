@@ -12,8 +12,8 @@
   "scripts": {
     "scss": "node-sass Sass/styles.scss -o css",
     "watch:eleventy": "eleventy --serve",
-    "watch:sass": "node-sass --watch sass -o css",
-    "develop": "yarn run scss ; yarn run watch:eleventy & yarn run watch:sass",
-    "build": "yarn run scss ; eleventy"
+    "watch:sass": "node-sass --watch Sass/styles.scss -o css",
+    "dev": "yarn run scss ; yarn run watch:eleventy & yarn run watch:sass",
+    "build": "yarn run scss --output-style=compressed ; eleventy"
   }
 }
