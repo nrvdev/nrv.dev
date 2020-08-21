@@ -1,0 +1,19 @@
+{
+  "name": "nrvdev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nrvdev/site.git",
+  "author": "Kevin Poston <kevposton@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "scss": "node-sass sass -o css",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "node-sass --watch sass -o css",
+    "develop": "yarn run scss ; yarn run watch:eleventy & yarn run watch:sass",
+    "build": "yarn run scss ; eleventy"
+  }
+}

@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,600");
+
+:root {
+  --main-bg: #252525;
+  --accent: #ff4a54;
+  --yellow: #ecb525;
+  --blue: #1ba1f2;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--main-bg);
+  background-image: url(/images/nrv-bg.png);
+  background-size: cover;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.vertical-center {
+  align-items: center;
+}
+
+.logo {
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+
+.bg-logo {
+  display: none;
+  left: -8px;
+  position: absolute;
+}
+
+.main {
+  width: 85%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-weight: normal;
+}
+
+.red {
+  color: var(--accent);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+hr {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: white;
+  width: 75%;
+  margin-bottom: 4em;
+  margin-top: 4em;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 18px;
+  }
+
+  hr {
+    width: 60%;
+  }
+
+  .main {
+    width: 750px;
+  }
+
+  .bg-logo {
+    display: initial;
+    width: 100%;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .main p {
+    padding-top: 4em;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+
+  .main {
+    width: 954px;
+  }
+
+  hr {
+    width: 730px;
+  }
+
+  p {
+    line-height: 35px;
+  }
+
+  .main p {
+    padding-top: 4em;
+  }
+
+  .bg-logo {
+    width: 90%;
+  }
+
+  .logo {
+    margin-top: 8em;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .bg-logo {
+    width: 100%;
+  }
+}
