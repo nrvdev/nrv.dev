@@ -2,13 +2,11 @@
 
 .hero-component {
   .background-wrapper {
-    background-image: url('/images/hero-mobile.jpg');
+    background-image: url('/images/hero-mobile.svg');
   }
-
   .logo-overlay {
     display: none;
   }
-
   .lead {
     @include rem(font-size, 26px);
     @extend %font-huge;
@@ -18,7 +16,6 @@
     font-weight: bold;
     line-height: 30px;
   }
-
   .follow {
     @extend %font-sofia-pro;
     @include rem(font-size, 14px);
@@ -26,24 +23,22 @@
     color: $text-dark-grey;
     text-align: center;
   }
-
   @media (min-width: $tablet) {
     .title {
       padding-top: 40px;
       text-align: center;
     }
-
     .lead {
-      line-height: 40px;
+      @include rem(font-size, 53px);
+      line-height: 60px;
     }
   }
   
   @media (min-width: $desktop) {
     .background-wrapper {
-      background-image: url('/images/hero-full.jpg');
+      background-image: url('/images/hero-full.svg');
       max-height: calc(100vh - 80px);
     }
-
     .lead {
       @include rem(font-size, 70px);
       width: 75%;
@@ -52,13 +47,11 @@
       padding-top: 80px;
       line-height: 90px;
     }
-
     .logo-overlay {
       display: flex;
       position: relative;
       bottom: 60px;
     }
-
     .follow {
       @include rem(font-size, 20px);
       line-height: 24px;

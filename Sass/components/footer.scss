@@ -2,24 +2,16 @@
 
 .footer-component {
   background-color: $dark-grey;
-  background-image: url('/images/logo-full-large-grey.svg');
-  background-repeat: no-repeat;
-  background-position: center 80px;
-  background-size: contain;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-
   .list-wrapper {
     padding-top: 60px;
-
     h2 {
       color: $white;
     }
-
     li {
       padding: 10px;
-
       a {
         @include rem(font-size, 16px);
         font-weight: normal;
@@ -27,39 +19,36 @@
       }
     }
   }
-
   @media (min-width: $tablet) {
-
   }
   
   @media (min-width: $desktop) {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-position: left center;
-    background-size: 70vw;
+    background-image: url('/images/logo-full-large-grey.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 88vw;
     text-align: left;
     padding-top: 100px;
     padding-bottom: 100px;
-
     .site-map-wrapper {
       width: 70vw;
       display: flex;
       justify-content: flex-start;
+      margin-top: 100px;
       padding-bottom: 50px;
       flex-wrap: wrap;  
-
       .list-wrapper {
         margin-right: 100px;
       }
     }
-
     .contact-copyright {
       margin-top: 50px;
       padding-top: 50px;
       border-top: solid 2px $white;
       width: 100%;
-
       p,
       a {
         @include rem(font-size, 16px);
