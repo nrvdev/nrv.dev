@@ -1,0 +1,57 @@
+@import '../sass.scss';
+
+.tablet,
+.tablet-up,
+.desktop {
+  display: none;
+}
+
+.wrapper {
+    &.events-news-wrapper {
+      display: block;
+    }
+}
+
+@media (min-width: $tablet) {
+  .tablet {
+    display: block;
+  }
+
+  .tablet-up {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .tablet {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .tablet-down {
+    display: none;
+  }
+
+  .wrapper {
+    &.events-news-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .left {
+        width: 24%;
+      }
+
+      .right {
+        width: 70%;
+      }
+    }
+  }
+}

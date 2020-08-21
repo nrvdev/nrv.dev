@@ -1,0 +1,116 @@
+.link-button,
+.button {
+  font-family: 'League Mono'; }
+
+.link-button,
+.button {
+  font-family: 'League Mono'; }
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.hidden, .search-component label {
+  visibility: hidden;
+  position: absolute; }
+
+.background-wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.standard-margins {
+  margin: 40px; }
+
+.standard-padding {
+  padding: 40px; }
+
+.link-button,
+.button {
+  font-size: 13px;
+  font-size: parse-int(13px)/16rem;
+  color: #FF4A54;
+  border: 1px solid #FF4A54;
+  background-color: rgba(255, 74, 84, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 55px;
+  width: 225px;
+  font-weight: bold; }
+  .link-button:active, .link-button:hover, .link-button:focus,
+  .button:active,
+  .button:hover,
+  .button:focus {
+    padding: 0;
+    border: 1px solid #FF4A54; }
+
+.button-link {
+  outline: none;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .button-link:active, .button-link:hover, .button-link:focus {
+    color: #FF4A54;
+    padding-bottom: 6px;
+    border-bottom: 4px solid #FF4A54; }
+
+.subtle-hero {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh; }
+  .subtle-hero h1 {
+    visibility: hidden; }
+
+@media (min-width: 768px) {
+  .subtle-hero {
+    background-position: 20vw 120px;
+    background-repeat: no-repeat; }
+    .subtle-hero.devs {
+      background-image: url("/images/devs.svg"); }
+    .subtle-hero.groups {
+      background-image: url("/images/groups.svg"); } }
+
+@media (min-width: 1140px) {
+  .subtle-hero {
+    background-position: 18vw 150px; }
+  .standard-margins {
+    margin-left: calc((100vw - 1140px) / 2);
+    margin-right: calc((100vw - 1140px) / 2); }
+  .standard-padding {
+    padding-left: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 1140px) / 2); } }
+
+.search-component input[type=search] {
+  font-size: 20px;
+  font-size: parse-int(20px)/16rem;
+  color: #212B2E;
+  background-color: transparent;
+  border: 0;
+  width: calc(100% - 245px);
+  margin-right: 20px;
+  border-bottom: solid 2px #C4C4C4; }
+  .search-component input[type=search]::placeholder {
+    font-size: 20px;
+    font-size: parse-int(20px)/16rem;
+    font-weight: bold;
+    color: #E5E5E5; }
+
+.search-component button.button {
+  margin: 0; }
+
+@media (min-width: 768px) {
+  .search-component {
+    display: flex; } }
+
+@media (min-width: 1140px) {
+  .search-component input[type=search] {
+    font-size: 36px;
+    font-size: parse-int(36px)/16rem; }
+    .search-component input[type=search]::placeholder {
+      font-size: 36px;
+      font-size: parse-int(36px)/16rem; } }

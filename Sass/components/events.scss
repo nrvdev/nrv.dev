@@ -1,0 +1,53 @@
+@import '../sass.scss';
+
+.events-component {
+  h2 {
+    @extend %font-huge;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  ul {
+    border-top: solid 1px $black;
+
+    li {
+      height: 140px;
+      border-bottom: solid 1px $black;
+      display: flex;
+      align-items: center;
+
+      .date {
+        @include rem(font-size, 14px);
+        padding: 45px;
+        font-weight: bold;
+      }
+
+      .details {
+        @include rem(font-size, 14px);
+        color: $medium-grey-2;
+        font-weight: bold;
+        line-height: 22px;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+
+  }
+  
+  @media (min-width: $desktop) {
+    h2 {
+      justify-content: center;
+    }
+
+    .more-events-button-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

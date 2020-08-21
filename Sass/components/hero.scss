@@ -1,0 +1,67 @@
+@import '../sass.scss';
+
+.hero-component {
+  .background-wrapper {
+    background-image: url('/images/hero-mobile.jpg');
+  }
+
+  .logo-overlay {
+    display: none;
+  }
+
+  .lead {
+    @include rem(font-size, 26px);
+    @extend %font-huge;
+    margin: 0;
+    height: 400px;
+    padding-bottom: 0;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  .follow {
+    @extend %font-sofia-pro;
+    @include rem(font-size, 14px);
+    font-weight: normal;
+    color: $text-dark-grey;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet) {
+    .title {
+      padding-top: 40px;
+      text-align: center;
+    }
+
+    .lead {
+      line-height: 40px;
+    }
+  }
+  
+  @media (min-width: $desktop) {
+    .background-wrapper {
+      background-image: url('/images/hero-full.jpg');
+      max-height: calc(100vh - 80px);
+    }
+
+    .lead {
+      @include rem(font-size, 70px);
+      width: 75%;
+      max-width: 1100px;
+      height: 700px;
+      padding-top: 80px;
+      line-height: 90px;
+    }
+
+    .logo-overlay {
+      display: flex;
+      position: relative;
+      bottom: 60px;
+    }
+
+    .follow {
+      @include rem(font-size, 20px);
+      line-height: 24px;
+    }
+  }
+}

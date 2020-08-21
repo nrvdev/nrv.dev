@@ -1,0 +1,60 @@
+@import '../sass.scss';
+@import '../base/classes.scss';
+
+.searchable-list-component {
+  top: 110px;
+
+  .searchable-list {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card-wrapper {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+    width: calc(80vw - 100px);
+    margin-left: 20vw;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .searchable-list {
+      padding-top: 95px;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: space-between;
+    }
+
+    .card-wrapper {
+      width: 45%;
+
+      &.group {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media (min-width: $desktop) {
+    width: calc(80vw - 200px);
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    .searchable-list {
+      padding-top: 150px;
+    }
+    
+    .card-wrapper {
+      width: calc((100% - 40px) / 2);
+    }
+  }
+
+  @media (min-width: $desktop-1080) {
+    .card-wrapper {
+      width: calc((100% - 120px) / 3);
+    }
+  }
+}

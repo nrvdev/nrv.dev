@@ -1,0 +1,27 @@
+.skills-component li {
+  font-family: 'League Mono'; }
+
+.skills-component {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+  .skills-component li {
+    font-size: 12px;
+    font-size: parse-int(12px)/16rem;
+    height: 28px;
+    width: calc(50% - 10px);
+    background-color: #E5E5E5;
+    margin-bottom: 20px;
+    border: solid 2px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .skills-component li:nth-child(odd) {
+      margin-right: 12px; }
+  @media (min-width: 768px) {
+    .skills-component.group li {
+      width: calc((100% - 32px) / 3);
+      margin-right: 10px; }
+      .skills-component.group li:nth-child(3n) {
+        margin-right: 0; } }

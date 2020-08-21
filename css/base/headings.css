@@ -1,0 +1,10 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold; }
+
+h2 {
+  font-size: 24px;
+  font-size: parse-int(24px)/16rem;
+  color: #212B2E; }

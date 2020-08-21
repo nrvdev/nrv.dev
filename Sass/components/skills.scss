@@ -1,0 +1,43 @@
+@import '../sass.scss';
+
+.skills-component {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  li {
+    @include rem(font-size, 12px);
+    @extend %font-league-mono;
+    height: 28px;
+    width: calc(50% - 10px);
+    background-color: $light-grey-2;
+    margin-bottom: 20px;
+    border: solid 2px $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(odd) {
+      margin-right: 12px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &.group {
+
+      li {
+        width: calc((100% - 32px) / 3);
+        margin-right: 10px;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: $desktop) {
+
+  }
+}

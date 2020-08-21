@@ -1,0 +1,130 @@
+@import '../sass.scss';
+
+.news-component {
+  p {
+    color: $text-medium-grey;
+  }
+
+  .focused-article {
+    background-image: url('/images/news-watermark.svg');
+    background-size: contain;
+
+    .news-info {
+      padding-right: 120px;
+    }
+
+    .news-title {
+      @include rem(font-size, 53px);
+      line-height: 60px;
+    }
+  }
+
+  .article-image-wrapper {
+    border-top: solid 4px $dark-coral;
+  }
+
+  .date {
+    @extend %font-league-mono;
+    @include rem(font-size, 12px);
+    font-weight: bold;
+    color: $dark-coral;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .news-title {
+    @extend %font-huge;
+    @include rem(font-size, 29px);
+    margin: 0;
+    line-height: 33px;
+  }
+
+  .news-details {
+    @extend %font-sofia-pro;
+    line-height: 25px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+    li {
+      width: calc(50% - 10px);
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      .date,
+      h3,
+      p {
+        width: 100%;
+      }
+
+      h3 {
+        @extend %font-huge;
+        @include rem(font-size, 14px);
+      }
+
+      h3,
+      p {
+        margin-bottom: 5px;
+      }
+
+      .article-image-wrapper {
+        height: 110px;
+        
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  @media (min-width: $tablet) {
+    background-image: url('/images/news-watermark.svg');
+    background-size: 30%;
+    background-position: 5% center;
+    background-repeat: no-repeat;
+ 
+    .focused-article {
+      background-image: none;
+    }
+  }
+  
+  @media (min-width: $desktop) {
+    .focused-article {
+      .article-image-wrapper {
+        max-height: 70vh;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    ul {
+      justify-content: space-between;
+
+      li {
+        width: calc(70vw / 2 - 40px);
+        margin-bottom: 60px;
+        
+        .article-image-wrapper {
+          width: calc(100%);
+          height: calc(70vw / 4); 
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

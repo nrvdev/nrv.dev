@@ -1,0 +1,41 @@
+@import '../sass.scss';
+@import '../base/classes.scss';
+
+header,
+main,
+footer {
+  outline: none;
+}
+
+main {
+  min-height: 100vh;
+}
+
+header {
+  height: 70px;
+}
+
+section {
+  @extend .standard-padding;
+
+  &.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  header {
+    height: 80px;
+  }
+}
+
+@media (min-width: $desktop) {
+  section {
+
+    &.no-desktop-padding {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

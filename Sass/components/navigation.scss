@@ -1,0 +1,76 @@
+@import '../sass.scss';
+@import '../base/classes.scss';
+
+.navigation-component {
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 70px;
+
+    &:active,
+    &:focus,
+    &:hover {
+      padding: 0;
+      border: 0;
+    }
+  }
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+  }
+
+  .join {
+    @extend %font-league-mono;
+    @include rem(font-size, 12px);
+  }
+
+  @media (min-width: $tablet) {
+    .logo {
+      width: 220px;
+    }
+  }
+  
+  @media (min-width: $desktop) {
+    .menu-button {
+      display: none;
+    }
+
+    ul {
+      width: calc(100vw - (220px + 200px + 50px));
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 50px;
+
+      li {
+        @include rem(font-size, 14px);
+        width: 12.5%;
+        text-align: center;
+      }
+    }
+
+    .join {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 200px;
+      color: $white;
+
+      &:active,
+      &:focus,
+      &:hover {
+        border: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

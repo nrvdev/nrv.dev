@@ -1,0 +1,28 @@
+.dev-card-component {
+  width: 100%; }
+  .dev-card-component .dev-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 225px;
+    width: 100%;
+    border-top: solid 3px #FF4A54; }
+    .dev-card-component .dev-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .dev-card-component .details h2 {
+    font-size: 22px;
+    font-size: parse-int(22px)/16rem;
+    line-height: 24px; }
+    .dev-card-component .details h2 span {
+      font-size: 12px;
+      font-size: parse-int(12px)/16rem;
+      color: #747781; }
+  .dev-card-component .details p {
+    font-size: 16px;
+    font-size: parse-int(16px)/16rem;
+    color: #86939E;
+    padding-bottom: 30px;
+    border-bottom: solid 2px #252525; }

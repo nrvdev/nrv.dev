@@ -1,0 +1,48 @@
+.footer-component {
+  background-color: #252525;
+  background-image: url("/images/logo-full-large-grey.svg");
+  background-repeat: no-repeat;
+  background-position: center 80px;
+  background-size: contain;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center; }
+  .footer-component .list-wrapper {
+    padding-top: 60px; }
+    .footer-component .list-wrapper h2 {
+      color: #ffffff; }
+    .footer-component .list-wrapper li {
+      padding: 10px; }
+      .footer-component .list-wrapper li a {
+        font-size: 16px;
+        font-size: parse-int(16px)/16rem;
+        font-weight: normal;
+        color: #86939E; }
+  @media (min-width: 1140px) {
+    .footer-component {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-position: left center;
+      background-size: 70vw;
+      text-align: left;
+      padding-top: 100px;
+      padding-bottom: 100px; }
+      .footer-component .site-map-wrapper {
+        width: 70vw;
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 50px;
+        flex-wrap: wrap; }
+        .footer-component .site-map-wrapper .list-wrapper {
+          margin-right: 100px; }
+      .footer-component .contact-copyright {
+        margin-top: 50px;
+        padding-top: 50px;
+        border-top: solid 2px #ffffff;
+        width: 100%; }
+        .footer-component .contact-copyright p,
+        .footer-component .contact-copyright a {
+          font-size: 16px;
+          font-size: parse-int(16px)/16rem;
+          color: #ffffff; } }

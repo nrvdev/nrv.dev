@@ -1,0 +1,107 @@
+@import '../sass.scss';
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+.background-wrapper {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.standard-margins {
+  margin: 40px;
+}
+
+.standard-padding {
+  padding: 40px;
+}
+
+.link-button, 
+.button {
+  @extend %font-league-mono;
+  @include rem(font-size, 13px);
+  color: $dark-coral;
+  border: 1px solid $dark-coral;
+  background-color: $translucent-coral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 55px;
+  width: 225px;
+  font-weight: bold;
+
+  &:active,
+  &:hover,
+  &:focus {
+    padding: 0;
+    border: 1px solid $dark-coral;
+  }
+}
+
+.button-link {
+  outline: none; // active state compensates for lack of outline
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $dark-coral;
+    padding-bottom: 6px;
+    border-bottom: 4px solid $dark-coral;
+  }
+}
+
+.subtle-hero {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: $tablet) {
+  .subtle-hero {
+    background-position: 20vw 120px;
+    background-repeat: no-repeat;
+
+    &.devs {
+      background-image: url('/images/devs.svg');
+    }
+
+    &.groups {
+      background-image: url('/images/groups.svg');
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .subtle-hero {
+    background-position: 18vw 150px;
+  }
+
+  .standard-margins {
+    margin-left: calc((100vw - 1140px) / 2);
+    margin-right: calc((100vw - 1140px) / 2);
+  }
+
+  .standard-padding {
+    padding-left: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 1140px) / 2);
+  }
+}

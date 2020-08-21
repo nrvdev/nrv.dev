@@ -1,0 +1,45 @@
+@import '../sass.scss';
+@import '../base/classes.scss';
+
+.search-component {
+  label {
+    @extend .hidden;
+  }
+
+  input[type=search] {
+    @include rem(font-size, 20px);
+    color: $text-dark-grey;
+    background-color: transparent;
+    border: 0;
+    width: calc(100% - 245px);
+    margin-right: 20px;
+
+    &::placeholder {
+      @include rem(font-size, 20px);
+      font-weight: bold;
+      color: $light-grey-2;
+    }
+
+    border-bottom: solid 2px $medium-grey-1;
+  }
+
+  button {
+    &.button {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+  
+  @media (min-width: $desktop) {
+    input[type=search] {
+      @include rem(font-size, 36px);
+
+      &::placeholder {
+        @include rem(font-size, 36px);
+      }
+    }
+  }
+}

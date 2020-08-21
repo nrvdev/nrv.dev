@@ -1,0 +1,90 @@
+@import '../sass.scss';
+@import './colors.scss';
+@import './layout.scss';
+@import './landmarks.scss';
+@import './classes.scss';
+@import './form-elements.scss';
+@import './headings.scss';
+
+@font-face {
+  font-family: "Huge";
+  src: url("/fonts/huge_agb_v5-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'League Mono';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/LeagueMono-Regular.woff2') format('woff2'),
+       url('/fonts/LeagueMono-Regular.woff') format('woff'),
+       url('/fonts/LeagueMonoVariable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'League Mono';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/LeagueMono-Bold.woff2') format('woff2'),
+       url('/fonts/LeagueMono-Bold.woff') format('woff'),
+       url('/fonts/LeagueMono-Bold.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/SofiaProRegular.woff') format('woff');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %font-roboto;
+  background-color: $light-grey;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+ul, 
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  outline: none; // active state fills this accessibility requirement
+
+  &:active, 
+  &:hover,
+  &:focus {
+    color: $dark-coral;
+    padding-bottom: 5px;
+    border-bottom: solid 1px $dark-coral;
+    font-weight: bold;
+  }
+}
+
+p {
+  @include rem(font-size, 14px);
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: $tablet) {
+
+}
+
+@media (min-width: $desktop) {
+  p {
+    @include rem(font-size, 20px);
+    font-weight: normal;
+  }
+}

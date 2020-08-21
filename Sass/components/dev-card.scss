@@ -1,0 +1,48 @@
+@import '../sass.scss';
+
+.dev-card-component {
+  width: 100%;
+  
+  .dev-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 225px;
+    width: 100%;
+    border-top: solid 3px $dark-coral;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .details {
+    h2 {
+      @include rem(font-size, 22px);
+      line-height: 24px;
+
+      span {
+        @include rem(font-size, 12px);
+        color: $medium-grey-2;
+      }
+    }
+
+    p {
+      @include rem(font-size, 16px);
+      color: $text-medium-grey;
+      padding-bottom: 30px;
+      border-bottom: solid 2px $dark-grey;
+    }
+  }
+
+  @media (min-width: $tablet) {
+
+  }
+  
+  @media (min-width: $desktop) {
+
+  }
+}
