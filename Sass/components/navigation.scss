@@ -49,7 +49,7 @@
 
       li {
         @include rem(font-size, 14px);
-        width: 12.5%;
+        padding: 25px;
         text-align: center;
       }
     }

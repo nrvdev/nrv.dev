@@ -1,7 +1,5 @@
 .filters-component {
-  position: absolute;
-  overflow-x: hidden;
-  width: 100vw;
+  display: none;
 
   .show-filters-button,
   .hide-filters-button {
@@ -34,13 +32,8 @@
 
   .filters-area {
     outline: none;
-    position: relative;
-    width: 100vw;
-    right: 100vw;
     background-color: $light-grey;
-    position: relative;
     z-index: 1;
-    transition: margin-left .5s;
 
     .show-filters-button {
       background-color: $dark-coral;
@@ -80,6 +73,11 @@
     padding-bottom: 20px;
     padding-left: 10px;
     margin-top: 0;
+
+    .mentor-badge {
+      margin-left: 5px;
+      width: 18px;
+    }
   }
 
   .filters-list {
@@ -107,6 +105,7 @@
   @media (min-width: $tablet) {
     width: 20vw;
     padding-top: 150px;
+    display: block;
 
     .no-top-padding {
       padding-top: 0;

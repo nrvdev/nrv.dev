@@ -1,23 +1,30 @@
 .skills-component {
-  margin-top: 30px;
+  border-top: solid 1px $dark-grey;
   display: flex;
   flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 20px;
   width: 100%;
+  justify-content: space-between;
 
   li {
-    @include rem(font-size, 12px);
-    @extend %font-league-mono;
     height: 28px;
     width: calc(50% - 10px);
     background-color: $light-grey-2;
-    margin-bottom: 20px;
-    border: solid 2px $black;
+    margin-bottom: 10px;
+    border: solid 1px $black;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &:nth-child(odd) {
-      margin-right: 12px;
+    
+    p {
+      @include rem(font-size, 12px);
+      @extend %font-league-mono;
+      font-weight: bold;
+      overflow: hidden;
+      padding: 5px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 
@@ -26,11 +33,6 @@
 
       li {
         width: calc((100% - 32px) / 3);
-        margin-right: 10px;
-
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
       }
     }
   }

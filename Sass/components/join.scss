@@ -9,6 +9,18 @@
   align-items: center;
   text-align: center;
 
+  .join-links {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    a {
+      margin: 20px;
+    }
+  }
+
   h2 {
     @include rem(font-size, 36px);
     font-weight: 200;
@@ -47,6 +59,10 @@
     background-image: url('/images/river-left.svg'), url('/images/river-right.svg');
     background-position: left bottom, right bottom;
     padding: 100px;
+
+    .join-links {
+      flex-direction: row;
+    }
 
     .logo {
       width: 33%;

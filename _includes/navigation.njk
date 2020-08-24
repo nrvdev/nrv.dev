@@ -10,11 +10,11 @@
       </button>
 
       <ul class="desktop">
-        <li><a href="#">News</a></li>
-        <li><a href="#">Devs</a></li>
-        <li><a href="#">Groups</a></li>
-        <li><a href="#">Companies</a></li>
-        <li><a href="#">Events</a></li>
+        {# <li><a href="#">News</a></li> #}
+        <li><a href="/devs/" class="{% if '/devs/' == page.url %}active-link{% endif %}">Devs</a></li>
+        <li><a href="#" >Groups</a></li>
+        {# <li><a href="#">Companies</a></li> #}
+        {# <li><a href="#">Events</a></li> #}
         <li><a href="#">Jobs</a></li>
       </ul>
 
