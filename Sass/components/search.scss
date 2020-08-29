@@ -4,20 +4,17 @@
 .search-component {
   display: flex;
   padding: 40px 40px 0 40px;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
 
   label {
     @extend .hidden;
   }
 
+  // TODO: Work on filter for mobile
   .filter-container{
     width: 70px;
     height: 60px;
-    // border: 1px solid #FF4A54;
-    // background-color: rgba(255, 74, 84, 0.15);
     background-color: #FF4A54;
-    // padding: 5px;
     transition: height .4s ease, width .5s ease, background .5s ease-in;
     position: absolute;
     top: 0;
