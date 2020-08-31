@@ -11,9 +11,9 @@ layout: base.njk
     {% raw %}
     
     <div class="filters-component">
-      <div class="expand-filters" @click="expandFilters = !expandFilters"></div>
+      <div class="expand-filters" @click="toggleFilters()"></div>
 
-      <div :class="expandFilters ? 'filters-area expanded' : ' filters-area'" tabindex="2">
+      <div ref="filters" class="filters-area" tabindex="2">
 
         <ul class="filters-list">
           <li  v-if="mentorCount > 0">
@@ -212,6 +212,21 @@ layout: base.njk
           const allTitles = this.developers.map(d => d.title);
           const titles = [...new Set(allTitles)].sort(); 
           this.titleFilters = titles.map(title => ({ value: title,  amount: this.developers.filter(d => d.title === title).length }));
+        },
+        toggleFilters() {
+          this.expandFilters = !this.expandFilters;
+
+          if (!this.expandFilters) {
+            let self = this;
+            self.$refs.filters.classList.add('slide-out');
+            setTimeout(function() {
+              self.$refs.filters.classList.remove('slide-out');
+              self.$refs.filters.classList.remove('expanded');
+            }, 500);
+          }
+          else {
+            this.$refs.filters.classList.add('expanded');
+          }
         }
       }
     })

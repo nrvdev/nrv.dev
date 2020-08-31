@@ -1,49 +1,56 @@
 .filters-component {
-  // display: none;
-
   .expand-filters {
     width: 70px;
     height: 60px;
     background-color: $dark-coral;
   }
 
-  // .show-filters-button,
-  // .hide-filters-button {
-  //   height: 40px;
-  //   width: 40px;
-  //   margin: 0;
-  //   padding: 0;
-
-  //   button {
-  //     margin: 0;
-  //   }
-  // }
-
-  // .hide-filters-button {
-  //   // position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   left: calc(100vw - 40px);
-  //   outline: none;
-  //   background-color: transparent;
-  //   transition: background-color .5s;
-
-  //   svg {
-  //     transition: fill .5s;
-  //     fill: transparent;
-  //     position: relative;
-  //     left: 10px;
-  //   }
-  // }
-
   .filters-area {
     display: none;
     outline: none;
     background-color: $light-grey;
-    z-index: 1;
+    transform: translateX(-100%);
+
+    @keyframes slide-in {
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    @-webkit-keyframes slide-in {
+      100% {
+        -webkit-transform: translateX(0%);
+      }
+    }
+
+    @keyframes slide-out {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @-webkit-keyframes slide-out {
+      0% {
+        -webkit-transform: translateX(0%);
+      }
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
+    }
 
     &.expanded {
       display: block;
+      animation: slide-in 0.5s forwards;
+      -webkit-animation: slide-in 0.5s forwards;
+    }
+
+    &.slide-out {
+      display: block;
+      animation: slide-out 0.5s forwards;
+      -webkit-animation: slide-out 0.5s forwards;
     }
 
     .show-filters-button {
@@ -53,85 +60,61 @@
       left: 100vw;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-      margin-left: 100vw;
+    h2 {
+      text-transform: uppercase;
+      border-bottom: solid 1px $black;
+      width: 225px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      margin-top: 0;
 
-      .show-filters-button {
-        color: transparent;
-        outline: none;
-      }
-
-      &+.hide-filters-button {
-        background-color: $dark-coral;
-        display: block;
-        color: $black;
-        z-index: 1;
-
-        svg {
-          fill: $white;
-        }
+      .mentor-badge {
+        margin-left: 5px;
+        width: 18px;
       }
     }
-  }
 
-  h2 {
-    text-transform: uppercase;
-    border-bottom: solid 1px $black;
-    width: 225px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    margin-top: 0;
+    .filters-list {
+      ul {
+        padding-left: 30px;
 
-    .mentor-badge {
-      margin-left: 5px;
-      width: 18px;
-    }
-  }
+        li {
+          @include rem(font-size, 14px);
+          color: $text-medium-grey;
+          margin-bottom: 10px;
 
-  .filters-list {
-    ul {
-      padding-left: 30px;
+          label {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
 
-      li {
-        @include rem(font-size, 14px);
-        color: $text-medium-grey;
-        margin-bottom: 10px;
-
-        label {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-        }
-        
-        input[type=checkbox] {
-          margin-right: 10px;
+          input[type="checkbox"] {
+            margin-right: 10px;
+          }
         }
       }
     }
   }
 
   @media (min-width: $tablet) {
-    // width: 20vw;
     padding-top: 150px;
-    display: block;
 
     .no-top-padding {
       padding-top: 0;
     }
 
     .filters-area {
-      right: 0;
-      background-color: transparent;
+      display: block;
+      transform: translateX(0%);
 
       &:hover,
       &:active,
       &:focus {
         margin-left: auto;
 
-        &+.hide-filters-button {
+        & + .hide-filters-button {
           display: none;
         }
       }
@@ -142,7 +125,7 @@
       display: none;
     }
   }
-  
+
   @media (min-width: $desktop) {
     padding-top: 200px;
   }
