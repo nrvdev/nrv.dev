@@ -1,39 +1,50 @@
 .filters-component {
-  display: none;
+  // display: none;
 
-  .show-filters-button,
-  .hide-filters-button {
-    height: 40px;
-    width: 40px;
-    margin: 0;
-    padding: 0;
-
-    button {
-      margin: 0;
-    }
+  .expand-filters {
+    width: 70px;
+    height: 60px;
+    background-color: $dark-coral;
   }
 
-  .hide-filters-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: calc(100vw - 40px);
-    outline: none;
-    background-color: transparent;
-    transition: background-color .5s;
+  // .show-filters-button,
+  // .hide-filters-button {
+  //   height: 40px;
+  //   width: 40px;
+  //   margin: 0;
+  //   padding: 0;
 
-    svg {
-      transition: fill .5s;
-      fill: transparent;
-      position: relative;
-      left: 10px;
-    }
-  }
+  //   button {
+  //     margin: 0;
+  //   }
+  // }
+
+  // .hide-filters-button {
+  //   // position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   left: calc(100vw - 40px);
+  //   outline: none;
+  //   background-color: transparent;
+  //   transition: background-color .5s;
+
+  //   svg {
+  //     transition: fill .5s;
+  //     fill: transparent;
+  //     position: relative;
+  //     left: 10px;
+  //   }
+  // }
 
   .filters-area {
+    display: none;
     outline: none;
     background-color: $light-grey;
     z-index: 1;
+
+    &.expanded {
+      display: block;
+    }
 
     .show-filters-button {
       background-color: $dark-coral;
@@ -103,7 +114,7 @@
   }
 
   @media (min-width: $tablet) {
-    width: 20vw;
+    // width: 20vw;
     padding-top: 150px;
     display: block;
 

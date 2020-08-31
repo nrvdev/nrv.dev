@@ -11,8 +11,9 @@ layout: base.njk
     {% raw %}
     
     <div class="filters-component">
+      <div class="expand-filters" @click="expandFilters = !expandFilters"></div>
 
-      <div class="filters-area" tabindex="2">
+      <div :class="expandFilters ? 'filters-area expanded' : ' filters-area'" tabindex="2">
 
         <ul class="filters-list">
           <li  v-if="mentorCount > 0">
@@ -128,7 +129,8 @@ layout: base.njk
         locations: [],
         searchQuery: '',
         showMentors: false,
-        mentorCount: 0
+        mentorCount: 0,
+        expandFilters: false,
       },
       computed: {
         filteredDevs: function () {

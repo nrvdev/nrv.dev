@@ -1,20 +1,19 @@
 .dagrid {
   display: grid;
+  transition: all 1s;
   @media (min-width: $tablet) {
     grid-template-columns: repeat(9, 1fr);
 
     .searchable-list-component {
-      grid-column: 3 / -1;
-    }
-  }
-  @media (min-width: $desktop) {
-    .searchable-list-component {
       grid-column: 2 / -1;
     }
   }
+  @media (min-width: $desktop) {
+    
+  }
   @media (min-width: $desktop-1080) {
     .searchable-list-component {
-      grid-column: 2 / 9;
+      grid-column: 3 / 9;
     }
   }
 }
