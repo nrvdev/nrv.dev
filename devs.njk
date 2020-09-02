@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+script: https://unpkg.com/vue
 ---
 <main id="mainElement" tabindex="0" role="main" style="position: relative;">
   <div class="subtle-hero devs">
@@ -11,7 +12,9 @@ layout: base.njk
     {% raw %}
     
     <div class="filters-component">
-      <div class="expand-filters" @click="toggleFilters()"></div>
+      <div class="expand-filters" @click="toggleFilters()">
+        <img src="/images/filter.svg">
+      </div>
 
       <div ref="filters" class="filters-area" tabindex="2">
 

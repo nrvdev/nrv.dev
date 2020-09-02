@@ -3,6 +3,12 @@
     width: 70px;
     height: 60px;
     background-color: $dark-coral;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 50%;
+    }
   }
 
   .filters-area {

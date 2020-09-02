@@ -4,13 +4,8 @@
   flex-direction: column;
   align-items: center;
 
-  .merge-celebration {
-    grid-column: span 2;
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%;
-    position: relative;
-    border: 4px solid $dark-coral;
+  h1 {
+    font-size: 2rem;
   }
 
   .join-steps {
@@ -20,19 +15,28 @@
     h2 {
       @extend %font-huge;
       color: $dark-coral;
-      font-size: 2rem;
+      font-size: 4rem;
+      margin: 1rem;
     }
     p {
       font-size: 1.2em;
       align-self: center;
       margin-left: 15px;
 
-      a {
+      a.inline-link {
+        border: none;
         font-weight: bold;
         text-decoration: underline;
         text-decoration-color: $dark-coral;
         text-underline-offset: 2px;
         text-decoration-thickness: 2px;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $dark-coral;
+          text-underline-offset: 2px;
+          text-decoration-thickness: 2px;
+        }
       }
 
       code {
@@ -43,6 +47,17 @@
 
     .code-sample {
       grid-column: 1 / -1;
+      font-size: .65rem;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .code-sample {
+      font-size: 1rem;
     }
   }
 }

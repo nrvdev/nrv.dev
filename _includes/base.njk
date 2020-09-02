@@ -7,8 +7,8 @@
     <title>NRV DEV</title>
     <link rel="icon"  href="{{ '/images/favicon.png' | url}}" />
     <link href="{{ '/css/styles.css' | url }}" rel="stylesheet" />
-    <script src="https://unpkg.com/vue"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    {% if script.length > 0 %}<script src="{{ script | url }}"></script>{% endif %}
+    {% if css.length > 0 %}<link rel="stylesheet" href="{{ css | url }}"/>{% endif %}
   </head>
   <body>
     {% include 'navigation.njk' %}

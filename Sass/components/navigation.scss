@@ -34,9 +34,7 @@
     .logo {
       width: 220px;
     }
-  }
-  
-  @media (min-width: $desktop) {
+
     .menu-button {
       display: none;
     }
@@ -69,5 +67,9 @@
         padding-bottom: 0;
       }
     }
+  }
+  
+  @media (min-width: $desktop) {
+    
   }
 }
