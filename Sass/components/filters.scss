@@ -16,6 +16,7 @@
     outline: none;
     background-color: $light-grey;
     transform: translateX(-100%);
+    margin-bottom: 3rem;
 
     @keyframes slide-in {
       100% {
@@ -106,6 +107,10 @@
 
   @media (min-width: $tablet) {
     padding-top: 150px;
+
+    .expand-filters {
+      display: none;
+    }
 
     .no-top-padding {
       padding-top: 0;

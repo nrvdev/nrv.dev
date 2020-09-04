@@ -1,3 +1,103 @@
+#toggle-checkbox {
+  cursor: pointer;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.toggle-label {
+  background-color: transparent;
+  color: $dark-grey;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ffscalasans, sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  text-indent: 100%;
+  transition: background-color 0.25s;
+  white-space: nowrap;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.toggle-label:before,
+.toggle-label:after {
+  background-color: $dark-grey;
+  content: "";
+  display: block;
+  height: 0.35rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: transform 0.25s;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+#toggle-checkbox:checked + .toggle-label:before {
+  top: 0.75rem;
+  transform: rotate(45deg);
+}
+
+#toggle-checkbox:checked + .toggle-label:after {
+  box-shadow: none;
+  transform: rotate(-45deg);
+}
+
+.toggle-label:after {
+  box-shadow: 0 0.75rem 0 $dark-grey;
+  top: 0.75rem;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  left: 0;
+  background-color: $dark-grey;
+  background-image: url('/images/logo-full-large-grey.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65vw;
+  overflow-y: hidden;
+  transition: all .35s ease-in-out;
+  display: flex;
+
+  ul {
+    padding-top: 2rem;
+    font-size: 2rem;
+
+    li {
+      padding-left: 50px;
+      padding-top: 20px;
+
+      img {
+        width: 240px;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+
+  #toggle-checkbox,
+  .toggle-label,
+  .overlay {
+    display: none;
+  }
+}
+
 .navigation-component {
   height: 100%;
   width: 100%;
