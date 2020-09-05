@@ -2,13 +2,14 @@
 layout: base.njk
 script: https://unpkg.com/vue
 ---
+
 <main id="mainElement" tabindex="0" role="main" style="position: relative;">
   <div class="subtle-hero devs">
     <h1>Devs</h1>
   </div>
   
   <div id="app" class="dagrid">
-    <div hidden v-once :setup="setDevs({{devs | json}})"></div>
+    <div hidden v-once :setup="setDevs({{devs | json}}, {{defaults | json}})"></div>
     {% raw %}
     
     <div class="filters-component">
@@ -85,7 +86,7 @@ script: https://unpkg.com/vue
           
           <div class="dev-card-component">
             <div class="dev-image-wrapper">
-              <img :src="dev.imageUrl" class="dev-image" loading="lazy" :alt="`Profile image of ${dev.name}`">
+              <img :src="getImageUrl(dev)" class="dev-image" loading="lazy" :alt="`Profile image of ${dev.name}`">
               <img v-if="dev.availableToMentor" class="mentor-badge" src="/images/badge-mentor.svg" alt="Badge for being a mentor">
             </div>
 
@@ -96,7 +97,7 @@ script: https://unpkg.com/vue
                 <span v-else="dev.company.length">{{dev.title}}</span>
               </h2>
 
-              <p>{{dev.bio}}</p>
+              <p>{{getDevBio(dev)}}</p>
             </div>
 
             <ul class="skills-component">
@@ -124,6 +125,7 @@ script: https://unpkg.com/vue
       el: '#app',
       data: {
         developers: [],
+        defaults: [],
         titleFilters: [],
         skillFilters: [],
         locationFilters: [],
@@ -155,8 +157,9 @@ script: https://unpkg.com/vue
         limit(collection) {
           return collection.slice(0, 4);
         },
-        setDevs(devs) {
+        setDevs(devs, defaults) {
           this.developers = this.shuffle(devs);
+          this.defaults = defaults[0];
           this.setMentorFilter();
           this.setTitleFilters();
           this.setSkillFilters();
@@ -230,6 +233,20 @@ script: https://unpkg.com/vue
           else {
             this.$refs.filters.classList.add('expanded');
           }
+        },
+        getImageUrl(dev) {
+          if (dev.imageUrl.length)
+            return dev.imageUrl;
+          
+          const randomIndex = Math.floor(Math.random() * this.defaults.profileImages.length);
+          return this.defaults.profileImages[randomIndex];
+        },
+        getDevBio(dev) {
+          if (dev.bio.length)
+            return dev.bio;
+
+          const randomIndex = Math.floor(Math.random() * this.defaults.bios.length);
+          return this.defaults.bios[randomIndex];
         }
       }
     })

@@ -16,7 +16,7 @@
       "Kanban",
       "F#"
     ],
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "bio": ""
   },
   {
     "name": "Evelyn Azizi",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Youssri Krul",
-    "imageUrl": "https://images.unsplash.com/photo-1587023568809-cfe1930ee6c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=952&q=80",
+    "imageUrl": "",
     "company": "",
     "gitHub": "kevPo",
     "twitter": "kevPo",
