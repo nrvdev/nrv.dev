@@ -61,10 +61,11 @@ a {
 
   &:active, 
   &:hover,
-  &:focus {
+  &:focus,
+  &.active-link {
     color: $dark-coral;
     padding-bottom: 5px;
-    border-bottom: solid 1px $dark-coral;
+    border-bottom: solid 1px #000;
     font-weight: bold;
   }
 }

@@ -1,0 +1,253 @@
+---
+layout: base.njk
+script: https://cdn.jsdelivr.net/npm/vue@2.6.12
+---
+
+<main id="mainElement" tabindex="0" role="main" style="position: relative;">
+  <div class="subtle-hero devs">
+    <h1>Devs</h1>
+  </div>
+  
+  <div id="app" class="dagrid">
+    <div hidden v-once :setup="setDevs({{devs | json}}, {{defaults | json}})"></div>
+    {% raw %}
+    
+    <div class="filters-component">
+      <div class="expand-filters" @click="toggleFilters()">
+        <img src="/images/filter.svg">
+      </div>
+
+      <div ref="filters" class="filters-area" tabindex="2">
+
+        <ul class="filters-list">
+          <li  v-if="mentorCount > 0">
+            <h2 class="no-top-padding">
+              Mentors
+              <svg class="mentor-badge" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2573 3040" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><circle cx="1294.44" cy="1383.34" r="944.444" style="fill:#fff;"/><path d="M1286.11,2678.81l1194.24,357.562c51.452,14.825 91.875,-18.543 91.875,-66.854l0,-2969.51l-2572.22,0l0,2969.45c0,48.311 40.419,81.742 91.879,66.855l1194.23,-357.5Zm-305.775,-625.37l-136.359,-98.485c-31.155,-19.697 -38.957,-66.979 -19.478,-98.485l194.795,-291.479l-346.702,7.896c-38.959,0 -74.048,-35.419 -74.048,-74.875l0,-161.489c0,-39.394 35.026,-74.875 74.048,-74.875l350.638,7.888l-198.669,-291.48c-23.353,-31.498 -11.676,-82.7 19.479,-102.397l136.359,-86.676c35.029,-23.615 81.788,-19.701 105.141,19.696l198.669,338.762l202.598,-338.762c23.352,-35.419 70.12,-43.311 105.141,-23.617c58.444,39.394 93.466,63.011 136.359,94.509c27.289,23.61 38.958,66.987 15.551,98.485l-198.67,291.48l354.507,-7.888c38.958,0 74.049,35.411 74.049,74.875l0,161.489c0,39.394 -35.029,74.875 -74.049,74.875l-354.507,-7.896l198.67,295.462c19.478,31.498 11.676,82.701 -19.479,102.461l-132.431,86.683c-35.021,23.61 -85.725,19.697 -109.07,-19.697l-198.669,-338.769l-202.543,338.769c-23.477,39.324 -70.175,43.237 -101.33,23.54Z" style="fill:#ff4a54;fill-rule:nonzero;"/></svg>
+            </h2>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" :value="showMentors" v-model="showMentors">
+                  <span>Available To Mentor ({{mentorCount}})</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 :class="mentorCount > 1 ? '' : 'no-top-padding'">Role / Title</h2>
+            <ul>
+              <li v-for="title in titleFilters">
+                <label>
+                  <input type="checkbox" :value="title.value" v-model="titles">
+                  <span>{{title.value}} ({{title.amount}})</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>Skills</h2>
+            <ul>
+              <li v-for="skill in skillFilters">
+                <label>
+                  <input type="checkbox" :value="skill.value" v-model="skills">
+                  <span>{{skill.value}} ({{skill.amount}})</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>Location</h2>
+            <ul>
+              <li v-for="location in locationFilters">
+                <label>
+                  <input type="checkbox" :value="location.value" v-model="locations">
+                  <span>{{location.value}} ({{location.amount}})</span>
+                </label>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="searchable-list-component">
+      <div class="search-component">
+        <label for="searchInput">Search Devs by name...</label>
+        <input tabindex="1" type="search" id="searchInput" placeholder="Search Devs by name..." v-model="searchQuery">
+      </div>
+
+      <transition-group v-if="filteredDevs.length" tag="ul" name="search-list" class="searchable-list">
+        <li v-for="(dev, index) in filteredDevs" :key="dev.name + index">
+          
+          <div class="dev-card-component">
+            <div class="dev-image-wrapper">
+              <img :src="getImageUrl(dev)" class="dev-image" loading="lazy" :alt="`Profile image of ${dev.name}`">
+              <img v-if="dev.availableToMentor" class="mentor-badge" src="/images/badge-mentor.svg" alt="Badge for being a mentor">
+            </div>
+
+            <div class="details">
+              <h2>
+                {{dev.name}}<br>
+                <span v-if="dev.company.length">{{dev.title}} | {{dev.company}}</span>
+                <span v-else="dev.company.length">{{dev.title}}</span>
+              </h2>
+
+              <p>{{getDevBio(dev)}}</p>
+            </div>
+
+            <ul class="skills-component">
+              <li v-for="skill in limit(dev.skills)">
+                <p>{{skill}}</p>
+              </li>
+            </ul>
+
+          </div>
+        </li>
+      </transition-group>
+      
+      <div v-else class="no-items-found">
+        <h1>404</h1>
+        <p>Dev Not Found</p>
+      </div>
+
+      {% endraw %}
+    </div>
+  </main>
+
+
+<script>
+  var app = new Vue({
+      el: '#app',
+      data: {
+        developers: [],
+        defaults: [],
+        titleFilters: [],
+        skillFilters: [],
+        locationFilters: [],
+        titles: [],
+        skills: [],
+        locations: [],
+        searchQuery: '',
+        showMentors: false,
+        mentorCount: 0,
+        expandFilters: false,
+      },
+      computed: {
+        filteredDevs: function () {
+          var self = this
+
+          if (self.searchQuery.length) {
+            const devs = self.developers.filter(function (user) {
+              var searchRegex = new RegExp(self.searchQuery, 'i');
+              return searchRegex.test(user.name);
+            });
+
+            return this.pipe(this.filterMentors, this.filterTitles, this.filterSkills, this.filterLocations)(devs);
+          }
+          
+          return this.pipe(this.filterMentors, this.filterTitles, this.filterSkills, this.filterLocations)(this.developers);
+        }
+      },
+      methods: {
+        limit(collection) {
+          return collection.slice(0, 4);
+        },
+        setDevs(devs, defaults) {
+          this.developers = this.shuffle(devs);
+          this.defaults = defaults[0];
+          this.setMentorFilter();
+          this.setTitleFilters();
+          this.setSkillFilters();
+          this.setLocationFilters();
+        },
+        shuffle(items) {
+          for (let i = items.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [items[i], items[j]] = [items[j], items[i]];
+          }
+
+          return items;
+        },
+        pipe(...fns) {
+          return (arg) => fns.reduce((prev, fn) => fn(prev), arg);
+        },
+        filterLocations(devs) {
+          if (this.locations.length > 0)
+            return devs.filter(d => this.locations.includes(d.location));
+
+          return devs;
+        },
+        filterSkills(devs) {
+          if (this.skills.length > 0)
+            return devs.filter(dev => this.skills.some(skill => dev.skills.includes(skill)));
+
+          return devs;
+        },
+        filterTitles(devs) {
+          if (this.titles.length > 0)
+            return devs.filter(d => this.titles.includes(d.title));
+
+          return devs;
+        },
+        filterMentors(devs) {
+          if (this.showMentors)
+            return devs.filter(d => d.availableToMentor);
+
+          return devs;
+        },
+        setMentorFilter() {
+          this.mentorCount = this.developers.filter(d => d.availableToMentor).length;
+        },
+        setLocationFilters: function () {
+          const allLocations = this.developers.map(d => d.location);
+          const locations = [...new Set(allLocations)].sort(); 
+          this.locationFilters = locations.map(location => ({ value: location,  amount: this.developers.filter(d => d.location === location).length }));
+        },
+        setSkillFilters() {
+          const developerSkills = this.developers.map(d => d.skills);
+          const allSkills = [].concat(...developerSkills);
+          const skills = [...new Set(allSkills)].sort(); 
+          this.skillFilters = skills.map(skill => ({ value: skill, amount: this.developers.filter(d => d.skills.includes(skill)).length }));
+        },
+        setTitleFilters() {
+          const allTitles = this.developers.map(d => d.title);
+          const titles = [...new Set(allTitles)].sort(); 
+          this.titleFilters = titles.map(title => ({ value: title,  amount: this.developers.filter(d => d.title === title).length }));
+        },
+        toggleFilters() {
+          this.expandFilters = !this.expandFilters;
+
+          if (!this.expandFilters) {
+            let self = this;
+            self.$refs.filters.classList.add('slide-out');
+            setTimeout(function() {
+              self.$refs.filters.classList.remove('slide-out');
+              self.$refs.filters.classList.remove('expanded');
+            }, 500);
+          }
+          else {
+            this.$refs.filters.classList.add('expanded');
+          }
+        },
+        getImageUrl(dev) {
+          if (dev.imageUrl.length)
+            return dev.imageUrl;
+          
+          const randomIndex = Math.floor(Math.random() * this.defaults.profileImages.length);
+          return this.defaults.profileImages[randomIndex];
+        },
+        getDevBio(dev) {
+          if (dev.bio.length)
+            return dev.bio;
+
+          const randomIndex = Math.floor(Math.random() * this.defaults.bios.length);
+          return this.defaults.bios[randomIndex];
+        }
+      }
+    })
+</script>

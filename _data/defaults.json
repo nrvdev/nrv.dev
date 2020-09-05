@@ -1,0 +1,14 @@
+[
+  {
+    "profileImages": [
+      "/images/user-female.svg",
+      "/images/user-male.svg",
+      "/images/user-female-2.svg",
+      "/images/user-male-2.svg"
+    ],
+    "bios": [
+      "404 - Bio Not Found",
+      "I chose to not add a bio, which is fine because the designers of this site added defaults so that it wouldn't mess with the aesthetics of the page."
+    ]
+  }
+]

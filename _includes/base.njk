@@ -5,15 +5,16 @@
     <meta name="Description" content="A community connecting developers throughout the New River Valley.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NRV DEV</title>
-    <link rel="icon" type="image/png" href="/images/fav.png" />
+    <link rel="icon"  href="{{ '/images/favicon.png' | url}}" />
     <link href="{{ '/css/styles.css' | url }}" rel="stylesheet" />
+    {% if script.length > 0 %}<script src="{{ script | url }}"></script>{% endif %}
+    {% if css.length > 0 %}<link rel="stylesheet" href="{{ css | url }}"/>{% endif %}
   </head>
   <body>
     {% include 'navigation.njk' %}
 
     {{ content | safe }}
 
-    {% include 'join.njk' %}
     {% include 'footer.njk' %}
   </body>
 </html>
