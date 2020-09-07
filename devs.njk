@@ -100,7 +100,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
               <p>{{getDevBio(dev)}}</p>
             </div>
 
-            <ul class="skills-component">
+            <ul v-if="dev.skills.length > 0" class="skills-component">
               <li v-for="skill in limit(dev.skills)">
                 <p>{{skill}}</p>
               </li>
@@ -159,7 +159,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         },
         setDevs(devs, defaults) {
           this.developers = this.shuffle(devs);
-          this.defaults = defaults[0];
+          this.defaults = defaults;
           this.setMentorFilter();
           this.setTitleFilters();
           this.setSkillFilters();

@@ -145,5 +145,10 @@
     .searchable-list--devs {
       grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
     }
+
+    .searchable-list--groups {
+      padding: 40px 200px;
+      grid-template-columns: repeat( auto-fill, minmax(350px, 1fr) );
+    }
   }
 }

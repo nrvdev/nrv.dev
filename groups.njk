@@ -22,7 +22,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         <li v-for="(group, index) in filteredGroups" :key="group.name + index">
           <div class="group-card-component">
             <div class="group-image-wrapper">
-              <img :src="group.imageUrl.length ? group.imageUrl : '/images/default-group.svg'" :alt="`Group image for ${group.name}`">
+              <img :src="group.imageUrl.length ? group.imageUrl : '/images/default-group.jpg'" :alt="`Group image for ${group.name}`">
             </div>
 
             <div class="details">
