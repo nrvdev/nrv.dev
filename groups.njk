@@ -22,17 +22,16 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         <li v-for="(group, index) in filteredGroups" :key="group.name + index">
           <div class="group-card-component">
             <div class="group-image-wrapper">
-              <img src="/images/default-group.svg" :alt="`Group image for ${group.name}`">
+              <img :src="group.imageUrl.length ? group.imageUrl : '/images/default-group.svg'" :alt="`Group image for ${group.name}`">
             </div>
 
             <div class="details">
               <h2>{{ group.name }}</h2>
 
               <p>{{ group.details }}</p>
-
-              <button class="button">Read More</button>
             </div>
 
+            <a href="#" class="link-button">Read More</a>
           </div>
         </li>
       </transition-group>

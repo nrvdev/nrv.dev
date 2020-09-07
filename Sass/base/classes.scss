@@ -84,6 +84,7 @@
 
     &.groups {
       background-image: url('/images/groups.svg');
+      background-size: 75%;
     }
   }
 }
@@ -91,6 +92,10 @@
 @media (min-width: $desktop) {
   .subtle-hero {
     background-position: 18vw 150px;
+
+    &.groups {
+      background-size: unset;
+    }
   }
 
   .standard-margins {
