@@ -1,0 +1,12 @@
+---
+layout: base.njk
+pagination:
+  data: groups
+  size: 1
+  alias: group
+permalink: '/groups/{{group.name|slug}}/'
+---
+
+<h1>{{group.name}}</h1>
+
+<p>{{group.details}}</p>

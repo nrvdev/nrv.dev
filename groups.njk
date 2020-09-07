@@ -31,7 +31,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
               <p>{{ group.details }}</p>
             </div>
 
-            <a href="#" class="link-button">Read More</a>
+            <a :href=`/groups/${group.slug}` class="link-button">Read More</a>
           </div>
         </li>
       </transition-group>
@@ -74,8 +74,16 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         limit(collection) {
           return collection.slice(0, 4);
         },
-        setGroups(groups, defaults) {
-          this.groups = groups;
+        setGroups(groups) {
+          this.groups = groups.map(g => {
+            return { ...g, slug: this.slugIt(g.name) };
+          });
+        },
+        slugIt: function (value) {
+          return value
+            .toLowerCase()
+            .replace(/ /g,'-')
+            .replace(/[^\w-]+/g,'');
         }
       }
     })
