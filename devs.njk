@@ -81,7 +81,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         <input tabindex="1" type="search" id="searchInput" placeholder="Search Devs by name..." v-model="searchQuery">
       </div>
 
-      <transition-group v-if="filteredDevs.length" tag="ul" name="search-list" class="searchable-list">
+      <transition-group v-if="filteredDevs.length" tag="ul" name="search-list" class="searchable-list searchable-list--devs">
         <li v-for="(dev, index) in filteredDevs" :key="dev.name + index">
           
           <div class="dev-card-component">

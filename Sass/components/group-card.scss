@@ -1,5 +1,13 @@
 .group-card-component {
   width: 100%;
+  background-color: $dark-grey;
+  background-image: url('/images/group-bg.svg');
+
+  button.button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
 
   .group-image-wrapper {
     display: flex;
@@ -8,7 +16,6 @@
     overflow: hidden;
     width: 100%;
     border-top: solid 3px $dark-coral;
-    height: calc(30vh + 30px);
 
     img {
       width: 100%;
@@ -18,8 +25,6 @@
   }
 
   .details {
-    background-color: $dark-grey;
-    background-image: url('/images/topographic-map.svg');
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +32,10 @@
     padding: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
-    height: 30vh;
+
+    h2 {
+      @extend %font-huge;
+    }
 
     h2,
     p,
@@ -39,14 +47,12 @@
     p {
       margin-top: 15px;
       margin-bottom: 30px;
+      @include rem(font-size, 14px);
+      @include rem(line-height, 20px);      
     }
   }
 
   @media (min-width: $tablet) {
-    .group-image-wrapper,
-    .details {
-      height: 225px;
-    }
 
   }
   

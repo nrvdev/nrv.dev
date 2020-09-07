@@ -1,0 +1,83 @@
+---
+layout: base.njk
+script: https://cdn.jsdelivr.net/npm/vue@2.6.12
+---
+
+<main id="mainElement" tabindex="0" role="main">
+  <div class="subtle-hero groups">
+    <h1>Groups</h1>
+  </div>
+  
+  <div id="app">
+    <div hidden v-once :setup="setGroups({{groups | json}})"></div>
+    {% raw %}
+
+    <div class="searchable-list-component">
+      <div class="search-component">
+        <label for="searchInput">Search Groups...</label>
+        <input tabindex="1" type="search" id="searchInput" placeholder="Search Groups..." v-model="searchQuery">
+      </div>
+
+      <transition-group v-if="filteredGroups.length" tag="ul" name="search-list" class="searchable-list searchable-list--groups">
+        <li v-for="(group, index) in filteredGroups" :key="group.name + index">
+          <div class="group-card-component">
+            <div class="group-image-wrapper">
+              <img src="/images/default-group.svg" :alt="`Group image for ${group.name}`">
+            </div>
+
+            <div class="details">
+              <h2>{{ group.name }}</h2>
+
+              <p>{{ group.details }}</p>
+
+              <button class="button">Read More</button>
+            </div>
+
+          </div>
+        </li>
+      </transition-group>
+      
+      <div v-else class="no-items-found">
+        <h1>404</h1>
+        <p>Group Not Found</p>
+      </div>
+
+      {% endraw %}
+    </div>
+  </main>
+
+
+<script>
+  var app = new Vue({
+      el: '#app',
+      data: {
+        groups: [],
+        defaults: [],
+        searchQuery: ''
+      },
+      computed: {
+        filteredGroups: function () {
+          var self = this;
+
+          if (self.searchQuery.length) {
+            const groups = self.groups.filter(function (group) {
+              var searchRegex = new RegExp(self.searchQuery, 'i');
+              return searchRegex.test(group.name);
+            });
+
+            return groups;
+          }
+          
+          return this.groups;
+        }
+      },
+      methods: {
+        limit(collection) {
+          return collection.slice(0, 4);
+        },
+        setGroups(groups, defaults) {
+          this.groups = groups;
+        }
+      }
+    })
+</script>
