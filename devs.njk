@@ -86,7 +86,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
           
           <div class="dev-card-component">
             <div class="dev-image-wrapper">
-              <img :src="getImageUrl(dev)" class="dev-image" loading="lazy" :alt="`Profile image of ${dev.name}`">
+              <img :src="dev.imageUrl" class="dev-image" loading="lazy" :alt="`Profile image of ${dev.name}`">
               <img v-if="dev.availableToMentor" class="mentor-badge" src="/images/badge-mentor.svg" alt="Badge for being a mentor">
             </div>
 
@@ -97,7 +97,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
                 <span v-else="dev.company.length">{{dev.title}}</span>
               </h2>
 
-              <p>{{getDevBio(dev)}}</p>
+              <p>{{dev.bio}}</p>
             </div>
 
             <ul v-if="dev.skills.length > 0" class="skills-component">
@@ -125,7 +125,6 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
       el: '#app',
       data: {
         developers: [],
-        defaults: [],
         titleFilters: [],
         skillFilters: [],
         locationFilters: [],
@@ -158,12 +157,36 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
           return collection.slice(0, 4);
         },
         setDevs(devs, defaults) {
-          this.developers = this.shuffle(devs);
-          this.defaults = defaults;
+          const { devs: devsWithAllValues } = this.pipe(this.addDefaultBios, this.addDefaultImage)({devs, defaults});
+          this.developers = this.shuffle(devsWithAllValues);
           this.setMentorFilter();
           this.setTitleFilters();
           this.setSkillFilters();
           this.setLocationFilters();
+        },
+        addDefaultBios(devsWithDefaults) {
+          const {devs, defaults} = devsWithDefaults;
+
+          const devsWithBios = devs.map(dev => {
+            if (!dev.bio.length)
+              dev.bio = this.getRandom(defaults.bios);
+
+            return dev;
+          });
+
+          return { devs: devsWithBios, defaults };
+        },
+        addDefaultImage(devsWithDefaults) {
+          const {devs, defaults} = devsWithDefaults;
+          
+          const devsWithImages = devs.map(dev => {
+            if (!dev.imageUrl.length)
+              dev.imageUrl = this.getRandom(defaults.profileImages);
+
+            return dev;
+          });
+
+          return { devs: devsWithImages, defaults };
         },
         shuffle(items) {
           for (let i = items.length - 1; i > 0; i--) {
@@ -172,6 +195,10 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
           }
 
           return items;
+        },
+        getRandom(collection) {
+          const randomIndex = Math.floor(Math.random() * collection.length);
+          return collection[randomIndex];
         },
         pipe(...fns) {
           return (arg) => fns.reduce((prev, fn) => fn(prev), arg);
@@ -233,20 +260,6 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
           else {
             this.$refs.filters.classList.add('expanded');
           }
-        },
-        getImageUrl(dev) {
-          if (dev.imageUrl.length)
-            return dev.imageUrl;
-          
-          const randomIndex = Math.floor(Math.random() * this.defaults.profileImages.length);
-          return this.defaults.profileImages[randomIndex];
-        },
-        getDevBio(dev) {
-          if (dev.bio.length)
-            return dev.bio;
-
-          const randomIndex = Math.floor(Math.random() * this.defaults.bios.length);
-          return this.defaults.bios[randomIndex];
         }
       }
     })
