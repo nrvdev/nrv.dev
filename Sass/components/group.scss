@@ -1,0 +1,53 @@
+.group-component {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    border-top: solid 3px $dark-coral; 
+    width: 100%;
+  }
+
+  h1 {
+    @extend %font-huge;
+  }
+
+  .group-details {
+    padding: 0 40px 40px 40px;
+  }
+
+  .group-detail {
+    align-items: center;
+    display: flex;
+    padding: 5px;
+
+    svg {
+      fill: $dark-coral;
+      width: 20px;
+    }
+
+    p, a {
+      margin: 0;
+      margin-left: 5px;
+      @include rem(font-size, 14px);
+    }
+  }
+
+  .group-detail-content {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 40px;
+  }
+  
+  @media (min-width: $desktop) {
+    flex-direction: row;
+
+    img {
+      max-width: 500px;
+    }
+  }
+}
