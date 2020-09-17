@@ -1,9 +1,13 @@
 ---
 layout: base.njk
-css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css
+css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css
+script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
 ---
 <div class="join-instructions-component">
-  <h1>Join the Community</h1>
+  <div class="subtle-hero join">
+    <h1>Join</h1>
+  </div>
+  <h1>Just a few steps away...</h1>
   <div class="join-steps">
     <h2>1.</h2>
     <p>Fork the <a class="inline-link" href="https://github.com/nrvdev/site/">NRV DEV</a> repository.</p>
@@ -11,26 +15,63 @@ css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css
     <p>Clone the fork into your environment.</p>
     <h2>3.</h2>
     <p>Create a new branch and update <code>_data/devs.json</code> to include you.</p>
-    <div class="code-sample">
-      <pre><code class="language-json"> {
-        "name": "Margaret Hamilton",
-        "imageUrl": "",
-        "company": "Hamilton Technologies, Inc.",
-        "gitHub": "",
-        "twitter": "",
-        "website": "",
-        "title": "CEO",
-        "location": "Cambridge",
-        "availableToMentor": true,
-        "skills": [
-          "Hexadecimal",
-          "Software Reliability",
-          "Systems Design",
-          "LGP-30"
-        ],
-        "bio": "I coined the term Software
-                Engineering."
-      }</code></pre>
+    <div class="json-details">
+      <div class="code-sample">
+        <pre><code class="language-json"> {
+          "name": "Margaret Hamilton",
+          "imageUrl": "",
+          "company": "Hamilton Technologies, Inc.",
+          "gitHub": "",
+          "twitter": "",
+          "website": "",
+          "title": "CEO",
+          "location": "Cambridge",
+          "availableToMentor": true,
+          "skills": [
+            "Hexadecimal",
+            "Software Reliability",
+            "Systems Design",
+            "LGP-30"
+          ],
+          "bio": "I coined the term Software
+                  Engineering."
+        }</code></pre>
+      </div>
+      <div>
+        <h3>Available To Mentor:</h3>
+        <p>You might be an expert in a technology that someone else in the community struggles with. By setting this flag to true, you're telling others that it's OK to contact you with questions. Don't have time for this right now? That's OK, you can always come back and set it to true with another PR in the future!</p>
+      </div>
+      <div>
+        <h3>Skills:</h3>
+        <p>You can add as many skills as you would like, <b>only the first 4 will be shown on the devs page</b>.</p>
+      </div>
+      <div>
+        <h3>Defaults:</h3>
+        <p>Not all fields are required and we do provide a few defaults to choose from. If you leave the field blank, <b>then a default will be randomly selected for you</b>.</p>
+      </div>
+      <div class="defaults">
+        <ul class="defaults-grid">
+          <li>
+            <p>imageUrl:</p>
+          </li>
+          {%- for profileImage in defaults.profileImages %}
+            <li class="default-image">
+              <img src="{{profileImage}}" alt="Default image at {{profileImage}} ">
+              <p>{{profileImage}}</p>
+            </li>
+          {% endfor -%}
+        </ul>
+        <ul class="defaults-grid bios">
+          <li>
+            <p>bio:</p>
+          </li>
+          {%- for bio in defaults.bios %}
+            <li>
+              <p>"{{bio}}"</p>
+            </li>
+          {% endfor -%}
+        </ul>
+      </div>
     </div>
     <h2>4.</h2>
     <p>Commit your changes and push up your branch.</p>
@@ -40,5 +81,3 @@ css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css
     <p>Get that merge notification.</p>
   </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>

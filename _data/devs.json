@@ -10,11 +10,7 @@
     "location": "Radford",
     "availableToMentor": false,
     "skills": [
-      "C#",
-      "JavaScript",
-      "SQL",
-      "Kanban",
-      "F#"
+      
     ],
     "bio": ""
   },
@@ -41,7 +37,7 @@
     "company": "United",
     "gitHub": "kevPo",
     "twitter": "kevPo",
-    "website": "",
+    "website": "https://google.com",
     "title": "Front End Developer",
     "location": "Blacksburg",
     "availableToMentor": true,
@@ -77,8 +73,8 @@
     "company": "",
     "gitHub": "kevPo",
     "twitter": "kevPo",
-    "website": "",
-    "title": "Software Engineer",
+    "website": "https://kevpo.netlify.com",
+    "title": "",
     "location": "Christiansburg",
     "availableToMentor": false,
     "skills": [
@@ -94,9 +90,8 @@
     "imageUrl": "https://images.unsplash.com/photo-1557243746-5d2a804a02b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80",
     "company": "Green Leopard",
     "gitHub": "kevPo",
-    "twitter": "kevPo",
     "website": "",
-    "title": "Developer",
+    "title": "",
     "location": "Blacksburg",
     "availableToMentor": true,
     "skills": [
@@ -115,7 +110,7 @@
     "twitter": "kevPo",
     "website": "",
     "title": "Systems Architect",
-    "location": "Roanoke",
+    "location": "",
     "availableToMentor": true,
     "skills": [
       "Docker",
