@@ -8,5 +8,8 @@
   "bios": [
     "404 - Bio Not Found",
     "I chose to not add a bio, which is fine because the designers of this site added defaults so that it wouldn't mess with the aesthetics of the page."
+  ],
+  "groupImages": [
+    "/images/default-group.jpg"
   ]
 }

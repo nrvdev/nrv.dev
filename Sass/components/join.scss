@@ -9,6 +9,10 @@
   align-items: center;
   text-align: center;
 
+  &.simple {
+    background: none;
+  }
+
   .join-links {
     align-items: center;
     display: flex;

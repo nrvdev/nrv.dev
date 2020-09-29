@@ -14,6 +14,13 @@
         @include rem(font-size, 16px);
         font-weight: normal;
         color: $text-medium-grey;
+
+        &:active, 
+        &:hover,
+        &:focus,
+        &.active-link {
+          border-bottom: solid 1px $dark-coral;
+        }
       }
     }
   }
