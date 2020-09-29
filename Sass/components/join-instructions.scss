@@ -51,6 +51,7 @@
 
     .json-details {
       grid-column: 1 / 3;
+      overflow: scroll;
     }
 
     .code-sample {

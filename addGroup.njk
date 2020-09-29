@@ -1,0 +1,55 @@
+---
+layout: base.njk
+css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css
+script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
+---
+<div class="join-instructions-component">
+  <div class="subtle-hero join">
+    <h1>Join</h1>
+  </div>
+  <h1>Show others your group...</h1>
+  <div class="join-steps">
+    <h2>1.</h2>
+    <p>Fork the <a class="inline-link" href="https://github.com/nrvdev/site/">NRV DEV</a> repository.</p>
+    <h2>2.</h2>
+    <p>Clone the fork into your environment.</p>
+    <h2>3.</h2>
+    <p>Create a new branch and update <code>_data/groups.json</code> to include you.</p>
+    <div class="json-details">
+      <div class="code-sample">
+        <pre><code class="language-json">   {
+    "name": "Blacksburg Cinema of Code",
+    "imageUrl": "https://secure.meetupstatic.com/photos/event/9/7/e/a/600_484478890.jpeg",
+    "contact": "Bob Tipton",
+    "website": "https://www.meetup.com/Blacksburg-Cinema-of-Code/",
+    "nextEvent": "",
+    "location": "Blacksburg",
+    "details": "This is a group for software developers of any skill level, in any language. We'll meet to watch a training video, then discuss it afterwards. Inspired by CleanCoders offer of a Community License for free meetings that are open to the public, so I hope that some of their videos will be the first we review. I'll post a meeting once I have the license secured, so go ahead and join the group if you're interested so you'll receive the notifications."
+  }</code></pre>
+      </div>
+      <div>
+        <h3>Defaults:</h3>
+        <p>Not all fields are required and we do provide a few defaults to choose from. If you leave the field blank, <b>then a default will be randomly selected for you</b>.</p>
+      </div>
+      <div class="defaults">
+        <ul class="defaults-grid">
+          <li>
+            <p>imageUrl:</p>
+          </li>
+          {%- for groupImage in defaults.groupImages %}
+            <li class="default-image">
+              <img src="{{groupImage}}" alt="Default group image at {{groupImage}} ">
+              <p>{{groupImage}}</p>
+            </li>
+          {% endfor -%}
+        </ul>
+      </div>
+    </div>
+    <h2>4.</h2>
+    <p>Commit your changes and push up your branch.</p>
+    <h2>5.</h2>
+    <p>Create your Pull Request.</p>
+    <h2>6.</h2>
+    <p>Get that merge notification.</p>
+  </div>
+</div>
