@@ -13,6 +13,22 @@
       
     ],
     "bio": ""
+  },  
+  {
+    "name": "Allen Baja Tuggle",
+    "imageUrl": "https://en.gravatar.com/userimage/62118157/0c0f00de2345ddc8a59b3934c33d7dca.jpg",
+    "company": "Nextup Solutions LLC",
+    "gitHub": "atuggle",
+    "twitter": "BajaDeveloper",
+    "website": "",
+    "title": "Software Engineer",
+    "location": "Blacksburg",
+    "availableToMentor": false,
+    "skills": [
+      "C#",
+      "SQL Server"
+    ],
+    "bio": "Agile-enthusiast and software development mentor."
   },
   {
     "name": "Evelyn Azizi",
