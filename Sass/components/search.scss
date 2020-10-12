@@ -103,5 +103,9 @@
         @include rem(font-size, 36px);
       }
     }
+
+    input[type=search].groups-search {
+      width: 40%;
+    }
   }
 }

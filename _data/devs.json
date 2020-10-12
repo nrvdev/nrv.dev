@@ -43,9 +43,7 @@
     "availableToMentor": true,
     "skills": [
       "React",
-      "JavaScript",
-      "Functional Programming",
-      "HTML/CSS"
+      "JavaScript"
     ],
     "bio": "Lorem ipsum dolor sit amet, dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
