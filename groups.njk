@@ -15,7 +15,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
     <div class="searchable-list-component">
       <div class="search-component">
         <label for="searchInput">Search Groups...</label>
-        <input tabindex="1" type="search" id="searchInput" placeholder="Search Groups..." v-model="searchQuery">
+        <input class="groups-search" tabindex="1" type="search" id="searchInput" placeholder="Search Groups..." v-model="searchQuery">
       </div>
 
       <transition-group v-if="filteredGroups.length" tag="ul" name="search-list" class="searchable-list searchable-list--groups">
@@ -28,7 +28,7 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
             <div class="details">
               <h2>{{ group.name }}</h2>
 
-              <p>{{ group.details }}</p>
+              <p>{{ group.details }}</p>  
             </div>
 
             <a :href=`/groups/${group.slug}` class="link-button">Read More</a>
