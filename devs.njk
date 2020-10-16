@@ -208,8 +208,10 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
           const {devs, defaults} = devsWithDefaults;
           
           const devsWithImages = devs.map(dev => {
-            if (!dev.imageUrl.length)
+            if (!dev.imageUrl.length && !dev.gitHub.length)
               dev.imageUrl = this.getRandom(defaults.profileImages);
+            else if (!dev.imageUrl.length && dev.gitHub.length)
+              dev.imageUrl = `https://github.com/${dev.gitHub}.png`;
 
             return dev;
           });

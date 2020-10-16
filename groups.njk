@@ -3,11 +3,12 @@ layout: base.njk
 script: https://cdn.jsdelivr.net/npm/vue@2.6.12
 ---
 
-<main id="mainElement" tabindex="0" role="main">
+<main id="mainElement" tabindex="0" role="main" class="{% if not groups.length %}empty{% endif %}">
   <div class="subtle-hero groups">
     <h1>Groups</h1>
   </div>
-  
+
+  {% if groups.length %}
   <div id="app">
     <div hidden v-once :setup="setGroups({{groups | json}})"></div>
     {% raw %}
@@ -43,6 +44,8 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
 
       {% endraw %}
     </div>
+    {% endif %}
+
   </main>
   <section class="join-component simple">
     <img class="logo" src="/images/logo-full-coral.svg" alt="NRV Dev Logo">
