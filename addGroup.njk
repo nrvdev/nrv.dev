@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+title: Add Your Group
 css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css
 script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
 ---
@@ -17,15 +18,22 @@ script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
     <p>Create a new branch and update <code>_data/groups.json</code> to include your group.</p>
     <div class="join-details">
       <div class="code-sample">
-        <pre><code class="language-json">   {
-    "name": "The Pied Pipers",
-    "imageUrl": "http://s3.amazonaws.com/assets.piedpiper.pro/app/uploads/2018/05/piedpiper_507_blog.jpg",
-    "contact": "Jared Dunn",
-    "website": "http://www.piedpiper.com",
-    "nextEvent": "TBD",
-    "location": "Silicon Valley",
-    "details": "The dream of a decentralized Internet has been a long time coming. We meet to discuss further."
-  }</code></pre>
+        <pre><code class="language-bash"> 
+        git checkout -b pied-pipers
+        </code></pre>
+      </div>
+      <div class="code-sample">
+        <pre><code class="language-json">   
+        {
+          "name": "The Pied Pipers",
+          "imageUrl": "http://s3.amazonaws.com/assets.piedpiper.pro/app/uploads/2018/05/piedpiper_507_blog.jpg",
+          "contact": "Jared Dunn",
+          "website": "http://www.piedpiper.com",
+          "nextEvent": "TBD",
+          "location": "Silicon Valley",
+          "details": "The dream of a decentralized Internet has been a long time coming. We meet to discuss further."
+        }
+        </code></pre>
       </div>
       <div>
         <h3>Defaults:</h3>

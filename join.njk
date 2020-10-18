@@ -1,5 +1,6 @@
 ---
 layout: base.njk
+title: Join
 css: https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css
 script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
 ---
@@ -17,7 +18,15 @@ script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
     <p>Create a new branch and update <code>_data/devs.json</code> to include you.</p>
     <div class="join-details">
       <div class="code-sample">
-        <pre><code class="language-json"> {
+        <pre><code class="language-bash"> 
+        git checkout -b jane-doe
+        </code></pre>
+      </div>
+    </div>
+    <div class="join-details">
+      <div class="code-sample">
+        <pre><code class="language-json"> 
+        {
           "name": "Jane Doe",
           "imageUrl": "https://cdn.com/janedoe.jpg",
           "company": "Awesome Company Inc.",
@@ -34,7 +43,8 @@ script: https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js
             "Public Speaking"
           ],
           "bio": "I like to write code."
-        }</code></pre>
+        }
+        </code></pre>
       </div>
       <div>
         <h3>Available To Mentor:</h3>
