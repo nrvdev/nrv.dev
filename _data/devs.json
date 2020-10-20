@@ -78,5 +78,26 @@
       "Object Oriented Programming"
     ],
     "bio": "Born and raised in southwest Virginia. I've been trying to get better at writing software since about 2008.  Sometimes I like to pretend I'm a designer."
+  },
+  {
+    "name": "Matt McHugh",
+    "imageUrl": "https://avatars0.githubusercontent.com/u/1156663?v=4",
+    "company": "NextUp Solutions / Exelaration",
+    "gitHub": "mchughmk",
+    "twitter": "HokieCoder",
+    "website": "",
+    "title": "VP, Mentorship and Growth",
+    "location": "Blacksburg",
+    "availableToMentor": true,
+    "skills": [
+      "C#",
+      "Python",
+      "Docker",
+      "Mentoring",
+      "JavaScript",
+      "TDD",
+      "S.O.L.I.D. Principles"
+    ],
+    "bio": "Husband and father. Professional developer, amateur musician. Constantly in search of new knowledge and how to pass it on to others."
   }
 ]
