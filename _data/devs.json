@@ -99,5 +99,30 @@
       "S.O.L.I.D. Principles"
     ],
     "bio": "Husband and father. Professional developer, amateur musician. Constantly in search of new knowledge and how to pass it on to others."
+  },
+  {
+    "name": "David Sutphin",
+    "imageUrl": "",
+    "company": "Star City Games",
+    "gitHub": "dsutphin",
+    "twitter": "david_sutphin",
+    "website": "https://sutphin.info",
+    "title": "Programmer/DevOps Associate",
+    "location": "Roanoke",
+    "availableToMentor": true,
+    "skills": [
+      "Software Development",
+      "Docker",
+      "Kubernetes",
+      "PHP",
+      "JavaScript",
+      "Laravel",
+      "Big Commerce",
+      "SQL",
+      "REST API",
+      "Git",
+      "Linux"
+    ],
+    "bio": "Open to new opportunities. Also to making new friends :). I'm bad about keeping up with social media. I don't know how to play MTG. <marquee>Cyber Security is my favorite thing right now.</marquee>"
   }
 ]
