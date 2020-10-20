@@ -40,5 +40,23 @@
       "CI/CD"
     ],
     "bio": "Husband. Father of four girls and a boy. Application Architect at Virginia_Tech. Docker Captain. Latter-Day Saint."
+  },
+  {
+    "name": "Kevin Poston",
+    "imageUrl": "",
+    "company": "Qualtrax",
+    "gitHub": "kevPo",
+    "twitter": "kevPo",
+    "website": "",
+    "title": "Software Engineer",
+    "location": "Riner",
+    "availableToMentor": false,
+    "skills": [
+      "C#",
+      ".NET",
+      "JavaScript",
+      "Object Oriented Programming"
+    ],
+    "bio": "Born and raised in southwest Virginia. I've been trying to get better at writing software since about 2008.  Sometimes I like to pretend I'm a designer."
   }
 ]
