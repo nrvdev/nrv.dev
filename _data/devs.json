@@ -17,5 +17,28 @@
       "Azure"
     ],
     "bio": ""
+  },
+  {
+    "name": "Michael Irwin",
+    "imageUrl": "https://avatars3.githubusercontent.com/u/746837?s=460&v=4",
+    "company": "Virginia Tech",
+    "gitHub": "mikesir87",
+    "twitter": "mikesir87",
+    "website": "https://mikesir87.io",
+    "title": "Applications Architect",
+    "location": "Blacksburg",
+    "availableToMentor": true,
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Software Development",
+      "Public Speaking",
+      "JavaScript",
+      "React",
+      "Java",
+      "CI/CD"
+    ],
+    "bio": "Husband. Father of four girls and a boy. Application Architect at Virginia_Tech. Docker Captain. Latter-Day Saint."
   }
 ]
