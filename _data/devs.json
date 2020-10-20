@@ -134,5 +134,24 @@
       "Teraform"
     ],
     "bio": "Lorem ipsum dolor sit amet,  ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "name": "Ryan Hagan",
+    "imageUrl": "https://avatars0.githubusercontent.com/u/731442?s=200&v=4",
+    "company": "KlariVis",
+    "gitHub": "hokiecsgrad",
+    "twitter": "hokiecsgrad",
+    "website": "",
+    "title": "Engineering Manager",
+    "location": "Christiansburg",
+    "availableToMentor": true,
+    "skills": [
+      "Software Development",
+      "Leadership/Mentoring",
+      "C#",
+      "TDD",
+      "Azure"
+    ],
+    "bio": ""
   }
 ]
