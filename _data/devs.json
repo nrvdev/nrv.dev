@@ -124,5 +124,28 @@
       "Linux"
     ],
     "bio": "Open to new opportunities. Also to making new friends :). I'm bad about keeping up with social media. I don't know how to play MTG. <marquee>Cyber Security is my favorite thing right now.</marquee>"
-  }
+  },
+  {
+    "name": "John Williams",
+    "imageUrl": "",
+    "company": "Ozmo",
+    "gitHub": "thudfactor",
+    "twitter": "elfin_john",
+    "website": "https://www.elfinjohn.com",
+    "title": "Senior Engineer",
+    "location": "Christiansburg",
+    "availableToMentor": true,
+    "skills": [
+      "React",
+      "Drupal",
+      "Hugo",
+      "Accessibility",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Writing",
+      "Public Speaking"
+    ],
+    "bio": "Optimized for Netscape 2.0. I have nothing to do with Star Wars."
+  }  
 ]
