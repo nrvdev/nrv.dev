@@ -147,5 +147,32 @@
       "Public Speaking"
     ],
     "bio": "Optimized for Netscape 2.0. I have nothing to do with Star Wars."
-  }  
+  },
+  {
+    "name": "Tripp Shelnutt",
+    "imageUrl": "http://www.gravatar.com/avatar/352a2f934c65bcbdfa4cfccf1253cedb.png?s=250",
+    "company": "Qualtrax",
+    "gitHub": "trippshelnutt",
+    "twitter": "trippshelnutt",
+    "website": "",
+    "title": "Software Engineer",
+    "location": "Willis",
+    "availableToMentor": false,
+    "skills": [
+      "C#",
+      "F#",
+      "JavaScript",
+      "SQL",
+      "Object Oriented Programming",
+      "Functional Programming",
+      "TDD",
+      ".NET",
+      "Vim",
+      "Git",
+      "Agile",
+      "DevOps",
+      "Azure"
+    ],
+    "bio": "I just moved to Willis, VA from North GA (around Chattanooga, TN). I've been working in the .NET stack for 10+ years. Recently obtained my MCSD App Builder certification. Other interests include reading, PC gaming, cat wrangling, beer brewing, and binge watching."
+  }
 ]
