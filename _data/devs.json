@@ -174,5 +174,34 @@
       "Azure"
     ],
     "bio": "I just moved to Willis, VA from North GA (around Chattanooga, TN). I've been working in the .NET stack for 10+ years. Recently obtained my MCSD App Builder certification. Other interests include reading, PC gaming, cat wrangling, beer brewing, and binge watching."
+  },
+  {
+    "name": "Bruce Markham",
+    "company": "Frontline Education",
+    "gitHub": "brucificus",
+    "twitter": "brucificus",
+    "title": "Senior Software Engineer",
+    "location": "Roanoke",
+    "availableToMentor": true,
+    "skills": [
+      "Software Development",
+      "CI/CD",
+      "Infrastructure as Code",
+      "Site Reliability Engineering",
+      "DevOps",
+      "C#",
+      "TypeScript",
+      "SQL",
+      "Git",
+      "Docker",
+      "Terraform",
+      "AWS",
+      "Object Oriented Programming",
+      "Design Patterns",
+      "S.O.L.I.D. Principles",
+      "TDD",
+      "Agile"
+    ],
+    "bio": "⛏ Code spelunker, 🎮 gamer, and 🐿 ADDer born and raised in southwestern VA. 🤵 Spouse, 🤗 ally, 🔨 craftsperson, 🔎 autodidact, 🧙 navel-gazer."
   }
 ]
