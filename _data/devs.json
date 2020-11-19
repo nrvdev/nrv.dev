@@ -203,5 +203,31 @@
       "Agile"
     ],
     "bio": "⛏ Code spelunker, 🎮 gamer, and 🐿 ADDer born and raised in southwestern VA. 🤵 Spouse, 🤗 ally, 🔨 craftsperson, 🔎 autodidact, 🧙 navel-gazer."
+  },
+  {
+    "name": "Ron Bruintjes",
+    "imageUrl": "",
+    "company": "Medeco Security Locks",
+    "gitHub": "ronaldb",
+    "twitter": "ronaldb",
+    "website": "https://www.automationadventures.com",
+    "title": "Programmer/Analyst, IT guy",
+    "location": "Christiansburg",
+    "availableToMentor": false,
+    "skills": [
+      "Software Development",
+      "SQL",
+      "Azure",
+      "C#",
+      "CI/CD",
+      "DevOps",
+      "Git",
+      "Docker",
+      "Agile",
+      ".NET",
+      "PowerBI",
+      "Business Objects"
+    ],
+    "bio": ""
   }
 ]
