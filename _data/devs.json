@@ -229,5 +229,28 @@
       "Business Objects"
     ],
     "bio": ""
+  },
+  {
+    "name": "Drew Budwin",
+    "imageUrl": "https://avatars0.githubusercontent.com/u/15161181?v=4",
+    "company": "FoxGuard Solutions",
+    "gitHub": "dbudwin",
+    "twitter": "dbudwin",
+    "website": "https://www.budw.in",
+    "title": "Software Engineer III",
+    "location": "Christiansburg",
+    "availableToMentor": true,
+    "skills": [
+      "Python",
+      "React",
+      "S.O.L.I.D.",
+      "TypeScript",
+      "Django",
+      "Docker",
+      "Git",
+      "Testing",
+      "Cybersecurity"
+    ],
+    "bio": "Hi 👋 I'm a software engineer with over a decade of professional experience working in the cybersecurity, defense, finance, and aerospace industries.  Outside of software, I enjoy woodworking, genealogy, cooking, ice hockey, college football, and traveling."
   }
 ]
