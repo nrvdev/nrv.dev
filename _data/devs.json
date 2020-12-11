@@ -252,5 +252,27 @@
       "Cybersecurity"
     ],
     "bio": "Hi 👋 I'm a software engineer with over a decade of professional experience working in the cybersecurity, defense, finance, and aerospace industries.  Outside of software, I enjoy woodworking, genealogy, cooking, ice hockey, college football, and traveling."
+  },
+  {
+    "name": "Joseph Bayes (Joey)",
+    "imageUrl": "https://by3301files.storage.live.com/y4mLMTFt_BZ6fC0KSaNC-9jO43B9iImys1r9Mi7Mk7jrwmySblMHoE657m4HyILBhEerEucR4Qx0hoxDi9jL-0d5J7Y054U_4D5xF05JZxISJXjm-4P_1F61g1VmRjvS2NDwD7-hwDM4GMutDECjw8IqQ034oAS3mz8qXha8iyrZX3URIZ8mBy1QkhvRzWgvz3E?width=710&height=568&cropmode=none",
+    "company": "Delta Defense",
+    "gitHub": "bayes343",
+    "twitter": "",
+    "website": "https://josephbayes.net/",
+    "title": "Software Engineer",
+    "location": "Christiansburg",
+    "availableToMentor": true,
+    "skills": [
+      "TypeScript",
+      "C#",
+      "CI/CD",
+      "Accessibility",
+      "Testing",
+      "Security",
+      "Firebase",
+      "Azure"
+    ],
+    "bio": "Native to Christiansburg. I left for about eight years to serve in the Marines, but then came back to raise my family and pursue my current career as a software engineer."
   }
 ]
