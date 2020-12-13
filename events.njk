@@ -1,24 +1,25 @@
 ---
 layout: base.njk
 title: Events
-script: https://cdn.jsdelivr.net/npm/vue@2.6.12
 ---
 
 <main id="mainElement" tabindex="0" role="main">
   <div class="subtle-hero events">
     <h1>Events</h1>
   </div>
+  <div class="events-component">
+    <a class="link-button" href="/">Add Event</a>
 
-  <div class="events-grid">
-
-    <div class="calendar-header">
+    <div class="events-grid">
+  
+      <div class="calendar-header">
         <h1 id="year"></h1>
         <h2 id="month"></h2>
         <button id="prev" onclick="prev();">&lt;</button>
         <button id="next" onclick="next();">&gt;</button>
-    </div>
-
-    <div id="days" class="days-header">
+      </div>
+  
+      <div id="days" class="days-header">
         <div class="dayname">Sunday</div>
         <div class="dayname">Monday</div>
         <div class="dayname">Tuesday</div>
@@ -26,9 +27,9 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         <div class="dayname">Thursday</div>
         <div class="dayname">Friday</div>
         <div class="dayname">Saturday</div>
-    </div>
-
-    <div id="abr" class="days-header">
+      </div>
+  
+      <div id="abr" class="days-header">
         <div class="dayname ">Sun</div>
         <div class="dayname">Mon</div>
         <div class="dayname">Tue</div>
@@ -36,10 +37,18 @@ script: https://cdn.jsdelivr.net/npm/vue@2.6.12
         <div class="dayname">Thu</div>
         <div class="dayname">Fri</div>
         <div class="dayname">Sat</div>
+      </div>
+  
+      <div id="calendar"></div>
+  
     </div>
 
-    <div id="calendar"></div>
-
+    <div class="selected-date">
+      <h2 id="selectedDate">Today</h2>
+      <ul id="selectedDateEvents">
+        <li><p>Docker Meetup</p></li>
+      </ul>
+    </div>
   </div>
 </main>
 
@@ -49,10 +58,12 @@ var date = new Date();
 function fillCalendar() {
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   var month = document.getElementById("month");
-  month.innerHTML = monthNames[date.getMonth()];
+  var monthName = monthNames[date.getMonth()];
+  month.innerHTML = monthName;
 
   var year = document.getElementById("year");
-  year.innerHTML = date.getUTCFullYear();
+  var currentYear = date.getUTCFullYear();
+  year.innerHTML = currentYear;
 
   var lastDay = new Date(date.getUTCFullYear(), date.getMonth() + 1, 0).getDate();
 
@@ -60,17 +71,19 @@ function fillCalendar() {
 
   for (var dayNumber = 1; dayNumber <= lastDay; dayNumber++) {
       var day = document.createElement('div');
+      day.setAttribute("data-date", `${monthName} ${dayNumber}, ${currentYear}`);
       day.className = "day";
-      day.innerHTML = dayNumber;
+      day.innerHTML = "<span class='circle'></span> " + dayNumber;
+      day.onclick = selectDate;
 
       if (dayNumber == 1)
           day.style.gridColumn = new Date(date.getUTCFullYear(), date.getMonth(), 1).getDay() + 1;
 
       var today = new Date();
       if (dayNumber == today.getDate() && date.getUTCFullYear() == today.getUTCFullYear() && date.getMonth() == today.getMonth())
-          day.className += " today";
+          day.className += " today selected";
 
-          calendar.appendChild(day);
+      calendar.appendChild(day);
     }
   }
 
@@ -95,14 +108,16 @@ function next() {
   fillCalendar();
 }
 
-document.ondblclick = function() {
-  // Change alignment of day numbers.
-  var days = document.getElementsByClassName("day");
-  for (var i = 0; i < days.length; i++) {
-      days[i].style.alignItems = days[i].style.alignItems == "end" ? "start" : "end";
-      days[i].style.justifyItems = days[i].style.justifyItems == "end" ? "start" : "end";
-  }
-};
+function selectDate(event) {
+  var selectedDay = document.getElementsByClassName("selected")[0];
+  selectedDay.classList.remove("selected");
+  var newlySelectedDate = event.currentTarget;
+  newlySelectedDate.classList.add("selected");
+  var selectedDate = document.getElementById("selectedDate");
+  selectedDate.innerHTML = newlySelectedDate.dataset.date;
+  
+  // get events and add to list
+}
 
 fillCalendar();
 </script>

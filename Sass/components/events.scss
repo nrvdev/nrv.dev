@@ -54,120 +54,169 @@
 //   padding: 0;
 // }
 
-.events-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr;
-  grid-gap: 20px;
-  font-size: .5em;
-}
+.events-component {
+  display: flex;
+  flex-direction: column;
 
-.calendar-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto auto;
-
-  h1, h2 {
-    margin: 0;
-    padding: 0;
+  .link-button {
+    margin: 25px auto;
   }
-}
 
-#year {
-  grid-row: 1;
-  grid-column: 2;
-  justify-self: center;
-}
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 20px;
+    font-size: .5em;
+  }
 
-#month {
-  grid-row: 2;
-  grid-column: 2;
-  justify-self: center;
-}
+  .calendar-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
 
-#prev, #next {
-  grid-row: 1 / span 2;
-  align-self: center;
-}
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
+  }
 
-button {
-  border: 5px solid #BE946A;
-  color: #D78822;
-  border-radius: 20px;
-  padding: 15px;
-  margin: 0px 20px;
-  background: #D8BC9D;
-  font-size: 5em;
-}
+  #year {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+  }
 
-button:hover {
-  background: #BE946A;
-}
+  #month {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: center;
+  }
 
-button:active {
-  border: 5px solid #A9ABBE;
-  color: #A9ABBE;
-  background: #5D628F;
-  position: relative;
-  top: 2px;
-  left: 2px;
-}
+  #prev, #next {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
 
-.days-header {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 10px;
-  justify-items: center;
-}
+  #prev, #next {
+    border: 2px solid black;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 2em;
+  }
 
-#abr {
-  display: none;
-}
+  button:hover {
+    // background: #BE946A;
+  }
 
-#calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: 1fr;
-  grid-gap: 10px;
-  padding: 0 10px;
-}
+  button:active {
+    border: 5px solid #A9ABBE;
+    color: #A9ABBE;
+    background: #5D628F;
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
 
-.day {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-items: end;
-  justify-items: end;
-  padding: 5px 10px;
-  background: #ff4a54;
-  color: white;
-  font-size: .5em;
-  height: 50px;
-}
-
-.today {
-  color: #5D628F;
-  font-weight: bold;
-}
-
-@media (max-width: 1200px) {
-  // body {
-  //     font-size: 1.2em;
-  // }
-
-  #days {
-      display: none;
+  .days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    font-size: 1.5em;
   }
 
   #abr {
-      display: grid;
+    display: none;
   }
 
-  button {
-      border: 3px solid orange;
-      border-radius: 15px;
-      padding: 10px;
-      margin: 0px 10px;
-      font-size: 1.2em;
+  #calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    padding: 0 10px 10px 10px;
+  }
+
+  .day {
+    display: flex;
+    border: 3px solid $dark-grey;
+    align-items: end;
+    justify-items: end;
+    padding: 5px 10px;
+    background: $dark-grey;
+    color: $white;
+    font-size: 1.5em;
+    height: 40px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.today {
+      background-color: $dark-coral;
+      color: $dark-grey;
+      border: 3px solid $dark-coral;
+
+      .circle:before {
+        color: $dark-coral;
+      }
+
+      &.has-events {
+        .circle:before {
+          color: $dark-grey;
+        }
+      }
+    }
+
+    .circle:before {
+      content: ' \25CF';
+      font-size: 20px;
+      color: $dark-grey;
+    }
+
+    &.has-events {
+      .circle:before {
+        color: $dark-coral;
+      }
+    }
+  }
+
+  .today {
+    color: $dark-coral;
+    font-weight: bold;
+  }
+
+  .selected {
+    border: 3px solid $dark-coral;
+  }
+
+  .selected-date {
+    text-align: center;
+  }
+
+  @media (max-width: 1200px) {
+    // body {
+    //     font-size: 1.2em;
+    // }
+
+    #days {
+        display: none;
+    }
+
+    #abr {
+        display: grid;
+    }
+
+    button {
+        // border: 3px solid orange;
+        // border-radius: 15px;
+        // padding: 10px;
+        // margin: 0px 10px;
+        // font-size: 1.2em;
+    }
   }
 }
