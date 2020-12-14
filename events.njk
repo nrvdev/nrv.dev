@@ -10,6 +10,20 @@ title: Events
   <div class="events-component">
     <a class="link-button" href="/">Add Event</a>
 
+    <div class="selected-date">
+      <h2 id="selectedDate">Today</h2>
+      <ul id="selectedDateEvents">
+        <li>
+          <div>
+            <h3>RVNUG</h3>
+            <a href="/">Dungeons and Dragons and Graph Databases</a>
+            <p>Where: Online</p>
+            <p>Details: Are you an adventurer? Do you want gold? Experience? Levels? Of course you do! And where do you get these things? The dungeon, where else? </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
     <div class="events-grid">
   
       <div class="calendar-header">
@@ -41,13 +55,6 @@ title: Events
   
       <div id="calendar"></div>
   
-    </div>
-
-    <div class="selected-date">
-      <h2 id="selectedDate">Today</h2>
-      <ul id="selectedDateEvents">
-        <li><p>Docker Meetup</p></li>
-      </ul>
     </div>
   </div>
 </main>
@@ -110,7 +117,10 @@ function next() {
 
 function selectDate(event) {
   var selectedDay = document.getElementsByClassName("selected")[0];
-  selectedDay.classList.remove("selected");
+
+  if (selectedDay !== undefined)
+    selectedDay.classList.remove("selected");
+
   var newlySelectedDate = event.currentTarget;
   newlySelectedDate.classList.add("selected");
   var selectedDate = document.getElementById("selectedDate");

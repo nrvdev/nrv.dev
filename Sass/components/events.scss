@@ -1,62 +1,5 @@
-// // .events-component {
-// //   h2 {
-// //     @extend %font-huge;
-// //     display: flex;
-// //     align-items: center;
-
-// //     img {
-// //       margin-right: 15px;
-// //     }
-// //   }
-
-// //   ul {
-// //     border-top: solid 1px $black;
-
-// //     li {
-// //       height: 140px;
-// //       border-bottom: solid 1px $black;
-// //       display: flex;
-// //       align-items: center;
-
-// //       .date {
-// //         @include rem(font-size, 14px);
-// //         padding: 45px;
-// //         font-weight: bold;
-// //       }
-
-// //       .details {
-// //         @include rem(font-size, 14px);
-// //         color: $medium-grey-2;
-// //         font-weight: bold;
-// //         line-height: 22px;
-// //       }
-// //     }
-// //   }
-
-// //   @media (min-width: $tablet) {
-
-// //   }
-  
-// //   @media (min-width: $desktop) {
-// //     h2 {
-// //       justify-content: center;
-// //     }
-
-// //     .more-events-button-wrapper {
-// //       width: 100%;
-// //       display: flex;
-// //       justify-content: flex-end;
-// //     }
-// //   }
-// // }
-// h1, h2 {
-//   margin: 0;
-//   padding: 0;
-// }
-
 .events-component {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   .link-button {
     margin: 25px auto;
@@ -130,6 +73,10 @@
   }
 
   #abr {
+    display: grid;
+  }
+
+  #days {
     display: none;
   }
 
@@ -196,27 +143,37 @@
 
   .selected-date {
     text-align: center;
+    grid-row: 3;
   }
 
-  @media (max-width: 1200px) {
-    // body {
-    //     font-size: 1.2em;
-    // }
+  @media (min-width: $desktop) {
+    grid-template-columns: 450px 1fr;
 
-    #days {
-        display: none;
+    .link-button {
+      grid-column: 2;
     }
 
-    #abr {
+    .events-grid {
+      grid-row: 2 / 4;
+      grid-column: 2;
+      padding: 25px;
+    }
+
+    .day {
+      height: 60px;
+    }
+
+    .selected-date {
+      grid-row: 1 / 3;
+      grid-column: 1;
+    }
+
+    #days {
         display: grid;
     }
 
-    button {
-        // border: 3px solid orange;
-        // border-radius: 15px;
-        // padding: 10px;
-        // margin: 0px 10px;
-        // font-size: 1.2em;
+    #abr {
+        display: none;
     }
   }
 }
