@@ -274,5 +274,25 @@
       "Azure"
     ],
     "bio": "Native to Christiansburg. I left for about eight years to serve in the Marines, but then came back to raise my family and pursue my current career as a software engineer."
+  },
+  {
+    "name": "Benjamin Lichtman",
+    "imageUrl": "https://avatars.githubusercontent.com/u/43787777?v=4",
+    "company": "Modea",
+    "gitHub": "Balichtman",
+    "twitter": "",
+    "website": "https://benjaminit.com/",
+    "title": "Associate Software Engineer",
+    "location": "Blacksburg",
+    "availableToMentor": true,
+    "skills": [
+      "MySQL",
+      "C#",
+      "Unity",
+      "Java",
+      "Python",
+      "Oracle"
+    ],
+    "bio": "Hi! I'm a software engineer with about 1 year of experience beyond my undergrad, I graduated from Radford University with the class of 2020. I like making video games with unity and problem solving in general!"
   }
 ]
