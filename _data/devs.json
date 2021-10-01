@@ -64,20 +64,21 @@
   {
     "name": "Kevin Poston",
     "imageUrl": "",
-    "company": "Qualtrax",
+    "company": "Remote",
     "gitHub": "kevPo",
     "twitter": "kevPo",
-    "website": "",
-    "title": "Software Engineer",
+    "website": "https://kevpo.github.io",
+    "title": "Senior Software Engineer",
     "location": "Riner",
     "availableToMentor": false,
     "skills": [
+      "Elixir",
       "C#",
       ".NET",
       "JavaScript",
       "Object Oriented Programming"
     ],
-    "bio": "Born and raised in southwest Virginia. I've been trying to get better at writing software since about 2008.  Sometimes I like to pretend I'm a designer."
+    "bio": "Born and raised in southwest Virginia. I've been trying to get better at writing software since about 2008. My two daughters keep me really busy these days, and I love every second of it."
   },
   {
     "name": "Matt McHugh",
@@ -285,14 +286,7 @@
     "title": "Associate Software Engineer",
     "location": "Blacksburg",
     "availableToMentor": true,
-    "skills": [
-      "MySQL",
-      "C#",
-      "Unity",
-      "Java",
-      "Python",
-      "Oracle"
-    ],
+    "skills": ["MySQL", "C#", "Unity", "Java", "Python", "Oracle"],
     "bio": "Hi! I'm a software engineer with about 1 year of experience beyond my undergrad, I graduated from Radford University with the class of 2020. I like making video games with unity and problem solving in general!"
   },
   {
@@ -305,13 +299,7 @@
     "title": "Associate Software Engineer",
     "location": "Roanoke",
     "availableToMentor": false,
-    "skills": [
-      "JavaScript",
-      "Project Management",
-      "React",
-      "PHP",
-      "Agile"
-    ],
+    "skills": ["JavaScript", "Project Management", "React", "PHP", "Agile"],
     "bio": "Hi! I'm Heather. I'm an Associate Software Engineer at Ozmo working mostly with React. I'm a former Drupal Developer. I grew up in Blacksburg and went to Radford University. Look me up on LinkedIn!"
   }
 ]
