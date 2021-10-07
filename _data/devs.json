@@ -21,22 +21,23 @@
   {
     "name": "Allen Baja Tuggle",
     "imageUrl": "",
-    "company": "Nextup Solutions LLC",
+    "company": "GE Digital",
     "gitHub": "atuggle",
     "twitter": "BajaDeveloper",
     "website": "",
-    "title": "Mentor and Software Developer",
-    "location": "Blacksburg",
-    "availableToMentor": true,
+    "title": "Sr Staff Software Engineer Digital Technology",
+    "location": "New River Valley",
+    "availableToMentor": false,
     "skills": [
       "C#",
       ".NET",
+      "React",
       "SQL Server",
       "TDD",
       "S.O.L.I.D. Principles",
       "Design Patterns"
     ],
-    "bio": "Agile-enthusiast and software development mentor."
+    "bio": "I write code!"
   },
   {
     "name": "Michael Irwin",
