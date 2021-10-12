@@ -1,15 +1,13 @@
 {
   "profileImages": [
-    "/images/user-female.jpg",
-    "/images/user-male.jpg",
-    "/images/user-female-2.jpg",
-    "/images/user-male-2.jpg"
+    "/images/default-user.jpg",
+    "/images/default-user-1.jpg",
+    "/images/default-user-2.jpg",
+    "/images/default-user-3.jpg"
   ],
   "bios": [
     "404 - Bio Not Found",
     "I chose to not add a bio, which is fine because the designers of this site added defaults so that it wouldn't mess with the aesthetics of the page."
   ],
-  "groupImages": [
-    "/images/default-group.jpg"
-  ]
+  "groupImages": ["/images/default-group.jpg"]
 }
