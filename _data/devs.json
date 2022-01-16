@@ -302,5 +302,25 @@
     "availableToMentor": false,
     "skills": ["JavaScript", "Project Management", "React", "PHP", "Agile"],
     "bio": "Hi! I'm Heather. I'm an Associate Software Engineer at Ozmo working mostly with React. I'm a former Drupal Developer. I grew up in Blacksburg and went to Radford University. Look me up on LinkedIn!"
+  },
+  {
+    "name": "Jordan Seiler",
+    "imageUrl": "https://avatars.githubusercontent.com/u/33209724?v=4",
+    "company": "Ozmo",
+    "gitHub": "JDSeiler",
+    "twitter": "",
+    "website": "https://jordanseiler.xyz",
+    "title": "Associate Integration Engineer",
+    "location": "Christiansburg",
+    "availableToMentor": false,
+    "skills": [
+      "TypeScript",
+      "NodeJS",
+      "Python",
+      "Rust",
+      "Firebase",
+      "Google Cloud Platform"
+    ],
+    "bio": "NRV Native, lifelong musician, and early-career software engineer. I love learning new things and am always hunting for new technologies/areas to explore. Currently interested in: functional programming, interpreters, graph theory and graph databases."
   }
 ]
