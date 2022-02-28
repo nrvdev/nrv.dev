@@ -179,12 +179,12 @@
   },
   {
     "name": "Bruce Markham",
-    "company": "Frontline Education",
+    "company": "CarMax",
     "gitHub": "brucificus",
     "twitter": "brucificus",
     "title": "Senior Software Engineer",
     "location": "Roanoke",
-    "availableToMentor": true,
+    "availableToMentor": false,
     "skills": [
       "Software Development",
       "CI/CD",
@@ -197,14 +197,14 @@
       "Git",
       "Docker",
       "Terraform",
-      "AWS",
+      "Azure",
       "Object Oriented Programming",
       "Design Patterns",
       "S.O.L.I.D. Principles",
       "TDD",
       "Agile"
     ],
-    "bio": "⛏ Code spelunker, 🎮 gamer, and 🐿 ADDer born and raised in southwestern VA. 🤵 Spouse, 🤗 ally, 🔨 craftsperson, 🔎 autodidact, 🧙 navel-gazer."
+    "bio": "⛏ Code spelunker, 🎮 gamer, and 🐿 hyperfocusing pedant born and raised in southwestern VA. 🤵 Spouse, 🔨 craftsperson, 🔎 autodidact, 🧙 navel-gazer."
   },
   {
     "name": "Ron Bruintjes",
