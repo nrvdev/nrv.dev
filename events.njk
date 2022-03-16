@@ -1,0 +1,133 @@
+---
+layout: base.njk
+title: Events
+---
+
+<main id="mainElement" tabindex="0" role="main">
+  <div class="subtle-hero events">
+    <h1>Events</h1>
+  </div>
+  <div class="events-component">
+    <a class="link-button" href="/">Add Event</a>
+
+    <div class="selected-date">
+      <h2 id="selectedDate">Today</h2>
+      <ul id="selectedDateEvents">
+        <li>
+          <div>
+            <h3>RVNUG</h3>
+            <a href="/">Dungeons and Dragons and Graph Databases</a>
+            <p>Where: Online</p>
+            <p>Details: Are you an adventurer? Do you want gold? Experience? Levels? Of course you do! And where do you get these things? The dungeon, where else? </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="events-grid">
+  
+      <div class="calendar-header">
+        <h1 id="year"></h1>
+        <h2 id="month"></h2>
+        <button id="prev" onclick="prev();">&lt;</button>
+        <button id="next" onclick="next();">&gt;</button>
+      </div>
+  
+      <div id="days" class="days-header">
+        <div class="dayname">Sunday</div>
+        <div class="dayname">Monday</div>
+        <div class="dayname">Tuesday</div>
+        <div class="dayname">Wednesday</div>
+        <div class="dayname">Thursday</div>
+        <div class="dayname">Friday</div>
+        <div class="dayname">Saturday</div>
+      </div>
+  
+      <div id="abr" class="days-header">
+        <div class="dayname ">Sun</div>
+        <div class="dayname">Mon</div>
+        <div class="dayname">Tue</div>
+        <div class="dayname">Wed</div>
+        <div class="dayname">Thu</div>
+        <div class="dayname">Fri</div>
+        <div class="dayname">Sat</div>
+      </div>
+  
+      <div id="calendar"></div>
+  
+    </div>
+  </div>
+</main>
+
+<script>
+var date = new Date();
+
+function fillCalendar() {
+  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var month = document.getElementById("month");
+  var monthName = monthNames[date.getMonth()];
+  month.innerHTML = monthName;
+
+  var year = document.getElementById("year");
+  var currentYear = date.getUTCFullYear();
+  year.innerHTML = currentYear;
+
+  var lastDay = new Date(date.getUTCFullYear(), date.getMonth() + 1, 0).getDate();
+
+  var calendar = document.getElementById("calendar");
+
+  for (var dayNumber = 1; dayNumber <= lastDay; dayNumber++) {
+      var day = document.createElement('div');
+      day.setAttribute("data-date", `${monthName} ${dayNumber}, ${currentYear}`);
+      day.className = "day";
+      day.innerHTML = "<span class='circle'></span> " + dayNumber;
+      day.onclick = selectDate;
+
+      if (dayNumber == 1)
+          day.style.gridColumn = new Date(date.getUTCFullYear(), date.getMonth(), 1).getDay() + 1;
+
+      var today = new Date();
+      if (dayNumber == today.getDate() && date.getUTCFullYear() == today.getUTCFullYear() && date.getMonth() == today.getMonth())
+          day.className += " today selected";
+
+      calendar.appendChild(day);
+    }
+  }
+
+function removeDays() {
+  var calendar = document.getElementById("calendar");
+  calendar.innerHTML = "";
+}
+
+function prev() {
+  removeDays();
+
+  date = new Date(date.getUTCFullYear(), date.getMonth(), 0);
+
+  fillCalendar();
+}
+
+function next() {
+  removeDays();
+
+  date = new Date(date.getUTCFullYear(), date.getMonth() + 1, 2);
+
+  fillCalendar();
+}
+
+function selectDate(event) {
+  var selectedDay = document.getElementsByClassName("selected")[0];
+
+  if (selectedDay !== undefined)
+    selectedDay.classList.remove("selected");
+
+  var newlySelectedDate = event.currentTarget;
+  newlySelectedDate.classList.add("selected");
+  var selectedDate = document.getElementById("selectedDate");
+  selectedDate.innerHTML = newlySelectedDate.dataset.date;
+  
+  // get events and add to list
+}
+
+fillCalendar();
+</script>
