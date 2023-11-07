@@ -42,11 +42,11 @@
   {
     "name": "Michael Irwin",
     "imageUrl": "https://avatars3.githubusercontent.com/u/746837?s=460&v=4",
-    "company": "Virginia Tech",
+    "company": "Docker",
     "gitHub": "mikesir87",
     "twitter": "mikesir87",
     "website": "https://mikesir87.io",
-    "title": "Applications Architect",
+    "title": "Developer Relations",
     "location": "Blacksburg",
     "availableToMentor": true,
     "skills": [
@@ -60,7 +60,7 @@
       "Java",
       "CI/CD"
     ],
-    "bio": "Husband. Father of four girls and a boy. Application Architect at Virginia_Tech. Docker Captain. Latter-Day Saint."
+    "bio": "Husband. Father of five girls and a boy. Developer Relations at Docker. Lover of all things DevOps. Latter-Day Saint."
   },
   {
     "name": "Kevin Poston",
