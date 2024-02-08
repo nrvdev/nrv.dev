@@ -293,15 +293,15 @@
   {
     "name": "Heather Price",
     "imageUrl": "https://avatars.githubusercontent.com/u/2983235?v=4",
-    "company": "Ozmo",
+    "company": "Kukui",
     "gitHub": "heatherpriceonline",
     "twitter": "heatherpriceonline",
     "website": "",
-    "title": "Associate Software Engineer",
-    "location": "Roanoke",
+    "title": "Senior Software Engineer",
+    "location": "Christiansburg",
     "availableToMentor": false,
-    "skills": ["JavaScript", "Project Management", "React", "PHP", "Agile"],
-    "bio": "Hi! I'm Heather. I'm an Associate Software Engineer at Ozmo working mostly with React. I'm a former Drupal Developer. I grew up in Blacksburg and went to Radford University. Look me up on LinkedIn!"
+    "skills": ["JavaScript", "Project Management", "React", "C#", "Agile"],
+    "bio": "Hi! I'm Heather. I'm a Senior Software Engineer at Kukui working mostly with React. I'm a former Drupal Developer. I grew up in Blacksburg and went to Radford University. Look me up on LinkedIn!"
   },
   {
     "name": "Jordan Seiler",
