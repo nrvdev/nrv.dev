@@ -1,3 +1,11 @@
 [
-  
+    {
+        "name": "Code World, No Blanket",
+        "imageUrl": "https://code-world-no-blanket.github.io/files/img/codeworld-Logo-Color.png",
+        "contact": "Chris Brown",
+        "website": "https://code-world-no-blanket.github.io/",
+        "nextEvent": "TBD",
+        "location": "Virginia Tech",
+        "details": "We are a software engineering research group in the Department of Computer Science at Virginia Tech. Our work broadly explores ways to improve the behavior, productivity, and decision-making of software engineers."
+    }
 ]
