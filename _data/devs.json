@@ -322,5 +322,28 @@
       "Google Cloud Platform"
     ],
     "bio": "NRV Native, lifelong musician, and early-career software engineer. I love learning new things and am always hunting for new technologies/areas to explore. Currently interested in: functional programming, interpreters, graph theory and graph databases."
-  }
+  },
+  {
+    "name": "Matthew Ratliff",
+    "imageUrl": "https://gravatar.com/gentlemendifferent0f701df08d",
+    "company": "Excella",
+    "gitHub": "mattratliff",
+    "twitter": "mattratliff2015",
+    "website": "",
+    "title": "Lead Consulant - AI Engineer",
+    "location": "Catawba, Va",
+    "availableToMentor": true,
+    "skills": [
+      "AI Engineering",
+      "JavaScript",
+      "Python",
+      "C#.net",
+      "Full stack development",
+      "Data Science",
+      "Angular",
+      "React",
+      "GenAI"
+    ],
+    "bio": "Husband. Father of two amazing boys. Advocate of the application of machine learning, all things AI, and the education and advancement of GenAI."
+  },
 ]
