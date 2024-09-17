@@ -1,51 +1,179 @@
 .events-component {
-  h2 {
-    @extend %font-huge;
+  display: grid;
+
+  .link-button {
+    margin: 25px auto;
+  }
+
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 20px;
+    font-size: .5em;
+  }
+
+  .calendar-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  #year {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  #month {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  #prev, #next {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  #prev, #next {
+    border: 2px solid black;
+    margin: 10px;
     display: flex;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 2em;
+  }
+
+  button:hover {
+    // background: #BE946A;
+  }
+
+  button:active {
+    border: 5px solid #A9ABBE;
+    color: #A9ABBE;
+    background: #5D628F;
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+
+  .days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    font-size: 1.5em;
+  }
+
+  #abr {
+    display: grid;
+  }
+
+  #days {
+    display: none;
+  }
+
+  #calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    padding: 0 10px 10px 10px;
+  }
+
+  .day {
+    display: flex;
+    border: 3px solid $dark-grey;
+    align-items: end;
+    justify-items: end;
+    padding: 5px 10px;
+    background: $dark-grey;
+    color: $white;
+    font-size: 1.5em;
+    height: 40px;
+    flex-direction: column;
+    align-content: center;
     align-items: center;
+    cursor: pointer;
 
-    img {
-      margin-right: 15px;
+    &.today {
+      background-color: $dark-coral;
+      color: $dark-grey;
+      border: 3px solid $dark-coral;
+
+      .circle:before {
+        color: $dark-coral;
+      }
+
+      &.has-events {
+        .circle:before {
+          color: $dark-grey;
+        }
+      }
+    }
+
+    .circle:before {
+      content: ' \25CF';
+      font-size: 20px;
+      color: $dark-grey;
+    }
+
+    &.has-events {
+      .circle:before {
+        color: $dark-coral;
+      }
     }
   }
 
-  ul {
-    border-top: solid 1px $black;
-
-    li {
-      height: 140px;
-      border-bottom: solid 1px $black;
-      display: flex;
-      align-items: center;
-
-      .date {
-        @include rem(font-size, 14px);
-        padding: 45px;
-        font-weight: bold;
-      }
-
-      .details {
-        @include rem(font-size, 14px);
-        color: $medium-grey-2;
-        font-weight: bold;
-        line-height: 22px;
-      }
-    }
+  .today {
+    color: $dark-coral;
+    font-weight: bold;
   }
 
-  @media (min-width: $tablet) {
-
+  .selected {
+    border: 3px solid $dark-coral;
   }
-  
+
+  .selected-date {
+    text-align: center;
+    grid-row: 3;
+  }
+
   @media (min-width: $desktop) {
-    h2 {
-      justify-content: center;
+    grid-template-columns: 450px 1fr;
+
+    .link-button {
+      grid-column: 2;
     }
 
-    .more-events-button-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
+    .events-grid {
+      grid-row: 2 / 4;
+      grid-column: 2;
+      padding: 25px;
+    }
+
+    .day {
+      height: 60px;
+    }
+
+    .selected-date {
+      grid-row: 1 / 3;
+      grid-column: 1;
+    }
+
+    #days {
+        display: grid;
+    }
+
+    #abr {
+        display: none;
     }
   }
 }
